@@ -16,11 +16,14 @@
 }
 
 header{
-    height: 100vh;
+    
 }
 
 .menu{
     height: 100%;
+}
+.navbar-toggler {
+    background-color: rgb(74, 78, 78);
 }
 .carru{
     height: 100%;
@@ -31,21 +34,18 @@ header{
     width: 100%;
 }
 @media screen and (max-width: 992px) {
-    
-    .header{
-        height: initial;
-        flex-direction: column;
-    }
+ 
     .menu{
         flex-direction: column;
     }
 }
 @media screen and (max-width: 768px) {
-    .header{
-        height: initial;
-        flex-direction: column;
-    }
+  .name{ 
+    margin: 0;
+    padding: 0;
+    
+  }
     .menu{
-        flex-direction: column;
+        text-align: start;
     }
 }
