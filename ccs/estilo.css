@@ -1,0 +1,51 @@
+/*<script src="https://kit.fontawesome.com/c538ed8188.js" crossorigin="anonymous"></script>*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;600;700&family=Noto+Sans:ital,wght@0,100;1,100&display=swap');
+
+* {
+    /*limpia margenes*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*fuente importada de Google*/
+@font-face {
+    font-family: "Inter";
+    src: url(../assets/font/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+header{
+    height: 100vh;
+}
+
+.menu{
+    height: 100%;
+}
+.carru{
+    height: 100%;
+}
+.imgcarru{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 992px) {
+    
+    .header{
+        height: initial;
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header{
+        height: initial;
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+    }
+}
