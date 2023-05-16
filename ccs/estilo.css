@@ -14,14 +14,10 @@
     font-family: "Inter";
     src: url(../assets/font/Inter-VariableFont_slnt\,wght.ttf);
 }
-
-header{
-    
+.header{
+    height: 100vh;
 }
 
-.menu{
-    height: 100%;
-}
 .navbar-toggler {
     background-color: rgb(74, 78, 78);
 }
@@ -34,12 +30,19 @@ header{
     width: 100%;
 }
 @media screen and (max-width: 992px) {
- 
+    .header{
+        height: initial;
+        flex-direction: column;
+    }
     .menu{
         flex-direction: column;
     }
 }
 @media screen and (max-width: 768px) {
+    .header{
+        height: initial;
+        flex-direction: column;
+    }
   .name{ 
     margin: 0;
     padding: 0;
@@ -47,5 +50,20 @@ header{
   }
     .menu{
         text-align: start;
+    }
+}
+@media screen and (max-width: 576px) {
+    .header{
+        height: 100vh;
+        flex-direction: column;
+    }
+    .menu{
+        height: 20%;
+    }
+    .boton{
+        border-color: aqua;
+    }
+    .carru{
+        height: 80%;
     }
 }
