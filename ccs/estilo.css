@@ -14,21 +14,27 @@
     font-family: "Inter";
     src: url(../assets/font/Inter-VariableFont_slnt\,wght.ttf);
 }
-.header{
+
+header{
+    background:url("../assets/img/3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
+    justify-content:center;
+    align-items: center;
+}
+.unete{
+    width: 15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sinlinea{
+    text-decoration: none;
+   
 }
 
-.navbar-toggler {
-    background-color: rgb(74, 78, 78);
-}
-.carru{
-    height: 100%;
-}
-.imgcarru{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
 @media screen and (max-width: 992px) {
     .header{
         height: initial;
@@ -37,7 +43,7 @@
     .menu{
         flex-direction: column;
     }
-}
+}/*
 @media screen and (max-width: 768px) {
     .header{
         height: initial;
@@ -51,18 +57,17 @@
     .menu{
         text-align: start;
     }
-}
+}*/
 @media screen and (max-width: 576px) {
     .header{
         height: 100vh;
         flex-direction: column;
     }
     .menu{
-        height: 20%;
+        height: 30%;
+        display: inline-block;
     }
-    .boton{
-        border-color: aqua;
-    }
+    
     .carru{
         height: 80%;
     }
