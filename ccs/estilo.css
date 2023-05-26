@@ -28,15 +28,28 @@ header{
 }
 
 .padrecard{
-    height: 90vh;
+    height: 100vh;
 }
-.padrecard .card{
+.card{
     background-color: rgb(19, 18, 18);
     height: 60%;
+    
 }
-.padrecard .card img{
-    height: 50%;
+.card img{
+    height: 57%;
     object-fit: cover;
+}
+.callejera img:hover {
+    border: 10px solid #050505;
+}
+.documental img:hover {
+    border: 10px solid #050505;
+}
+.retratos img:hover {
+    border: 10px solid #050505;
+}
+.viajes img:hover {
+    border: 10px solid #050505;
 }
 .unete{
     width: 15rem;
@@ -50,39 +63,31 @@ header{
 }
 
 @media screen and (max-width: 992px) {
-    .header{
+    .padrecard{
+        height: initial
+    }
+    .padrecard .card{
         height: initial;
-        flex-direction: column;
     }
-    .menu{
-        flex-direction: column;
-    }
-}/*
+  
+}
 @media screen and (max-width: 768px) {
-    .header{
+     .padrecard{
+        height: initial
+    }
+    .padrecard .card{
         height: initial;
-        flex-direction: column;
     }
-  .name{ 
-    margin: 0;
-    padding: 0;
     
-  }
-    .menu{
-        text-align: start;
-    }
-}*/
+}
 @media screen and (max-width: 576px) {
-    .header{
-        height: 100vh;
-        flex-direction: column;
+    .padrecard{
+        height: initial
     }
-    .menu{
-        height: 30%;
-        display: inline-block;
+    .padrecard .card{
+        height: initial;
     }
-    
-    .carru{
-        height: 80%;
+    .card img{
+        height: initial;
     }
 }

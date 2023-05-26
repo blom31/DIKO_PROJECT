@@ -39,9 +39,9 @@
               </a>
               <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item  text-white" href="#Callejera">Callejera</a></li>
-                <li><a class="dropdown-item  text-white" href="#">Documental</a></li>
-                <li><a class="dropdown-item  text-white" href="#">Retrato</a></li>
-                <li><a class="dropdown-item text-white" href="#">Viajes</a></li>
+                <li><a class="dropdown-item  text-white" href="#Documental">Documental</a></li>
+                <li><a class="dropdown-item  text-white" href="#Retratos">Retratos</a></li>
+                <li><a class="dropdown-item text-white" href="#Viajes">Viajes</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -70,7 +70,7 @@
     <section class="my-2 portfolio text-white" id="Portfolio">
       <div class="container-fluid">
         <h3 class="fst-italic">Portfolio</h3>
-        <div>
+        <div class="mx-4">
           <p>El tipo de texto que te recomiendo para tu portfolio depende de tu campo profesional y tu público objetivo.
             En general, te sugiero que uses un tono formal pero cercano, que refleje tu personalidad y tu pasión por lo
             que haces.
@@ -81,8 +81,8 @@
             Lo ideal es que tu texto tenga entre 300 y 500 palabras.</p>
         </div>
         <div class="row padrecard">
-          <div class="col-md-4 d-flex justify-content-center">
-            <div class="card" style="width: 28rem;">
+          <div class="col-md-4 sm-12 d-flex justify-content-center">
+            <div class="card">
               <img src="./assets/img/musawat.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Cortometraje "Musawat"</h5>
@@ -94,7 +94,7 @@
             </div>
           </div>
           <div class="col-md-4 d-flex justify-content-center ">
-            <div class="card" style="width: 28rem;">
+            <div class="card">
               <img src="./assets/img/moyra.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Largometraje "Lunes o martes nunca domingo"</h5>
@@ -106,11 +106,13 @@
             </div>
           </div>
           <div class="col-md-4 d-flex justify-content-center">
-            <div class="card" style="width: 28rem;">
-              <img src="./assets/img/criolla.jpg" class="card-img-top" alt="...">
+            <div class="card">
+              <img src="./assets/img/criolla2.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Exposición "Callejera Criolla"</h5>
-                <p class="card-text">Primera exposición CALLEJERA CRIOLLA en el marco del Festival Caracas Doc.</p>
+                <p class="card-text">Primera exposición CALLEJERA CRIOLLA en el marco del Festival Caracas Doc.
+                  Primera exposición CALLEJERA CRIOLLA en el marco del Festival Caracas Doc.
+                  Primera exposición CALLEJERA CRIOLLA en el marco del Festival Caracas Doc.</p>
                 <a href="#" class="">Go somewhere</a>
               </div>
             </div>
@@ -125,16 +127,75 @@
     <!--==========================================================================================================-->
     <!--======================= == == == == == ==G A L E R I A == == == == == == == ================================-->
     <!--============================================================================================================-->
-    
-   <section class="my-2 portfolio text-white" id="Galeria">
-    <div class="container-fluid">
-        <h3 class="fst-italic">Galería</h3>
-        <div>
-          <h4 id="Callejera">Callejera</h4>
+
+    <section class="my-2 portfolio text-white" id="Galeria"">
+    <div class=" container-fluid">
+      <a class="navbar-brand text-white fs-3 fst-italic" href="#">
+        Galería
+      </a>
+
+      <div class="row d-flex justify-content-center mx-5 callejera">
+        <h5 id="Callejera">Callejera</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ullam voluptas adipisci temporibus nemo.
+        </p>
+
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/4.jpeg" alt="Galería de fotos callejeras">
         </div>
-     </div>
-  </section>   
- <!--
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/5.jpeg" alt="Galería de fotos callejeras">
+        </div>
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/6.jpeg" alt="Galería de fotos callejeras">
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center mx-5 documental">
+        <h5 id="Documental">Documental</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ullam voluptas adipisci temporibus nemo.
+        </p>
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/7.jpeg" alt="Galería de fotos documental">
+        </div>
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/8.jpg" alt="Galería de fotos documental">
+        </div>
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/9.jpg" alt="Galería de fotos documental">
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center mx-5 retratos">
+        <h5 id="Retratos">Retratos</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ullam voluptas adipisci temporibus
+          nemo.
+        </p>
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/10.jpg" alt="Galería de fotos retratos">
+        </div>
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/11.jpg" alt="Galería de fotos retratos">
+        </div>
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/12.jpg" alt="Galería de fotos retratos">
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center mx-5 viajes">
+        <h5 id="Viajes">Viajes</h5>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ullam voluptas adipisci temporibus
+          nemo.
+        </p>
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/13.jpg" alt="Galería de fotos viajes">
+        </div>
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/14.jpg" alt="Galería de fotos viajes">
+        </div>
+        <div class="row col-lg-4 my-1">
+          <img src="./assets/img/15.jpg" alt="Galería de fotos viajes">
+        </div>
+      </div>
+      </div>
+    </section>
+    <!--
         <div id="carouselExampleControls" class="carousel slide hijo" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -178,8 +239,8 @@
       <!--<a class="nav-link" href="#">Link</a>-->
       <div class="unete">
         <a class="text-secondary fs-5 sinlinea" href="#">Únete</a>
-        <a> <img src="./assets/img/instagram.png"> </a>
-        <a> <img src="./assets/img/facebook.png"> </a>
+        <a href="https://www.instagram.com/diko_fotografia/"> <img src="./assets/img/instagram.png"> </a>
+        <a href="https://www.facebook.com/darwin.d.betancourt"> <img src="./assets/img/facebook.png" > </a>
       </div>
 
     </nav>
