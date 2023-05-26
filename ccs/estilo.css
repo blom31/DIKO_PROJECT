@@ -14,7 +14,9 @@
     font-family: "Inter";
     src: url(../assets/font/Inter-VariableFont_slnt\,wght.ttf);
 }
-
+body{
+    background-color: black;
+}
 header{
     background:url("../assets/img/3.jpeg");
     background-size: cover;
@@ -23,6 +25,18 @@ header{
     height: 100vh;
     justify-content:center;
     align-items: center;
+}
+
+.padrecard{
+    height: 90vh;
+}
+.padrecard .card{
+    background-color: rgb(19, 18, 18);
+    height: 60%;
+}
+.padrecard .card img{
+    height: 50%;
+    object-fit: cover;
 }
 .unete{
     width: 15rem;
