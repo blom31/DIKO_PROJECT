@@ -28,10 +28,11 @@ header{
 }
 
 .padrecard{
-    height: 100vh;
+   
+    height: 84vh;
 }
 .card{
-    background-color: rgb(19, 18, 18);
+   background-color: rgb(19, 18, 18);
     height: 60%;
     
 }
