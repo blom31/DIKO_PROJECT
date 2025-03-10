@@ -40,17 +40,28 @@ header{
     height: 57%;
     object-fit: cover;
 }
+.callejera{
+    padding: 0;
+}
 .callejera img:hover {
-    border: 10px solid #050505;
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.5);
 }
 .documental img:hover {
-    border: 10px solid #050505;
+     cursor: pointer;
+     transition: 1s;
+     transform: scale(1.5);
 }
 .retratos img:hover {
-    border: 10px solid #050505;
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.5);
 }
 .viajes img:hover {
-    border: 10px solid #050505;
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.5);
 }
 .unete{
     width: 15rem;

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Big Shoulders Stencil", sans-serif;
+    background-color: rgb(9, 9, 9);
+}
+
+h2{
+    color: #f8eeee;
+    font-size: 2em;
+}
+header{
+    margin-top: 1em;
+}
+.marca{
+    color: #f8eeee;
+    text-decoration: none;
+    padding-left: 2em;
+    font-size: 2.5em;
+}
+/* Estilos generales del carrusel */
+.carrusel {
+    margin-top: 1em;
+    width: 97vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor de cada imagen y su texto */
+.item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    transition: flex-grow 0.1s ease;
+}
+
+/* Estilos de las imágenes */
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Estilos del texto */
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: rgb(252, 252, 252);
+    font-size: 2em;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    background-color: transparent;
+    backdrop-filter: blur(05px);
+    text-decoration: none;
+}
+
+/* Efectos al pasar el mouse */
+.item:hover {
+    flex-grow: 2; /* Hace que la imagen se expanda */
+}
+
+.item:hover img {
+    opacity: 1;
+    filter: contrast(120%);
+    transform: scale(1.1);
+}
+
+.item:hover .titulo {
+    opacity: 1; /* Muestra el texto */
+}
+
+
+
+@media screen and (max-width: 768px){
+    section{
+        flex-wrap: wrap;
+    }
+    section img{
+        height: 80%;
+    }
+    section img:hover{
+        width: 70%;
+        
+    }
+}
