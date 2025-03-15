@@ -95,8 +95,8 @@ header {
         padding-left: 0.5em;
     }
     .carrusel {
-        flex-direction: row;
-        height: 40vh;
+        flex-direction: column;
+        height: 100vh;
     }
     .item img {
         height: 100%;
@@ -108,22 +108,70 @@ header {
         font-size: 1em;
     }
 }
-.galeria{
-    margin-top: 1em;
+/* 🔹 Contenedor del carrusel */
+.carrusel-container {
+    position: relative;
     width: 98vw;
     height: 87vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-left: 15px;
-    gap:15px;
+    justify-content: center;
 }
-.galeria_img{
-    width: 100vw;
-    height: 80vh;
-}
-.galeria_img img{
+
+/* 🔹 Vista inicial con 5 imágenes en línea */
+.carrusel {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
 }
+
+/* 🔹 Contenedor de imágenes */
+.imagenes {
+    display: flex;
+    width: 100%;
+}
+
+.imagenes img {
+    width: 20%; /* 5 imágenes visibles en 100% del ancho */
+    height: 80vh;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* 🔹 Modo Carrusel (cuando una imagen es seleccionada) */
+.carrusel.activo .imagenes {
+    width: 100%; /* Se expande para permitir desplazamiento */
+}
+
+.carrusel.activo .imagenes img {
+    width: 500%; /* Una imagen ocupa toda la pantalla */
+    cursor: default;
+}
+
+/* 🔹 Botones de navegación (ocultos al inicio) */
+.nav-btn,
+.close-btn {
+    position: absolute;
+    background: rgb(248, 4, 4);
+    border: none;
+    padding: 10px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+    transition: background 0.3s;
+}
+
+/* 🔹 Posiciones de los botones */
+#prev { left: 5%; }
+#next { right: 5%; }
+#close { top: 20px; right: 20px; font-size: 1.5rem; }
+
+/* 🔹 Mostrar botones solo en modo carrusel */
+.carrusel.activo .nav-btn,
+.carrusel.activo .close-btn {
+    display: block;
+}
+
+

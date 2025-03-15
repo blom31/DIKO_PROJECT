@@ -17,18 +17,30 @@
         </a>
     </header>
     <main>
-        <section class="galeria">
-            <div class="galeria_img"><img src="../assets/img/PALMERAS.png" alt=""></div>
-            <div class="galeria_img"><img src="../assets/img/10.jpg" alt=""></div>
-            <div class="galeria_img"><img src="../assets/img/6.jpeg" alt=""></div>
-            <div class="galeria_img"><img src="../assets/img/VALLE.jpg" alt=""></div>
-            <div class="galeria_img"><img src="../assets/img/8.jpg" alt=""></div>
+        <section class="carrusel-container">
+            <div class="carrusel" id="carrusel">
+                <div class="imagenes">
+                    <img src="../assets/img/PALMERAS.png" alt="Imagen 1">
+                    <img src="../assets/img/10.jpg" alt="Imagen 2">
+                    <img src="../assets/img/6.jpeg" alt="Imagen 3">
+                    <img src="../assets/img/VALLE.jpg" alt="Imagen 4">
+                    <img src="../assets/img/8.jpg" alt="Imagen 5">
+                </div>
+            </div>
+        
+            <!-- Botones de navegación (solo visibles en modo carrusel) -->
+            <button id="prev" class="nav-btn">&#10094;</button>
+            <button id="next" class="nav-btn">&#10095;</button>
+            <button id="close" class="close-btn">✖</button>
         </section>
         
+        
     </main>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script src="../js/carrusel.js"></script>
 </body>
 </html>
