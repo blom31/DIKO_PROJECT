@@ -9,9 +9,9 @@ body {
     background-color: rgb(9, 9, 9);
     }
 
-h2 {
+h5{
     color: #f8eeee;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 header {
@@ -63,7 +63,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    color: rgb(252, 252, 252);
+    color: #f8eeee;
     font-size: 2em;
     text-align: center;
     transition: opacity 0.5s ease-in-out;
@@ -94,7 +94,7 @@ header {
         font-size: 1.5em;
         padding-left: 0.5em;
     }
-    .carrusel {
+    .carrusel  {
         flex-direction: column;
         height: 100vh;
     }
@@ -108,70 +108,34 @@ header {
         font-size: 1em;
     }
 }
-/* 🔹 Contenedor del carrusel */
-.carrusel-container {
-    position: relative;
-    width: 98vw;
-    height: 87vh;
+.fotos-container{
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
-/* 🔹 Vista inicial con 5 imágenes en línea */
-.carrusel {
-    width: 100%;
-    overflow: hidden;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* 🔹 Contenedor de imágenes */
-.imagenes {
+.fotos{
+    margin-top: 2em;
+    height: 75vh;
     display: flex;
-    width: 100%;
 }
 
-.imagenes img {
-    width: 20%; /* 5 imágenes visibles en 100% del ancho */
-    height: 80vh;
+.img{
+    width: 20%;
+    height: 50%;
+    padding: 5px;
+}
+.img img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
-/* 🔹 Modo Carrusel (cuando una imagen es seleccionada) */
-.carrusel.activo .imagenes {
-    width: 100%; /* Se expande para permitir desplazamiento */
+.fotos-resumen{
+    color: #d0caca;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
 }
 
-.carrusel.activo .imagenes img {
-    width: 500%; /* Una imagen ocupa toda la pantalla */
-    cursor: default;
-}
-
-/* 🔹 Botones de navegación (ocultos al inicio) */
-.nav-btn,
-.close-btn {
-    position: absolute;
-    background: rgb(248, 4, 4);
-    border: none;
-    padding: 10px 20px;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 10;
-    display: none;
-    transition: background 0.3s;
-}
-
-/* 🔹 Posiciones de los botones */
-#prev { left: 5%; }
-#next { right: 5%; }
-#close { top: 20px; right: 20px; font-size: 1.5rem; }
-
-/* 🔹 Mostrar botones solo en modo carrusel */
-.carrusel.activo .nav-btn,
-.carrusel.activo .close-btn {
-    display: block;
+.biografia{
+    height: 80vh;
 }
 
 
