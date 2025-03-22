@@ -9,14 +9,12 @@ body {
     background-color: rgb(9, 9, 9);
     }
 
-h5{
-    color: #f8eeee;
-    font-size: 1.5em;
+h1{
+    color: #eef0f8;
+    font-size: 2em;
 }
 
-header {
-    margin-top: 1em;
-}
+
 .menu{
     display: flex;
     justify-content: space-between;
@@ -31,16 +29,17 @@ header {
     text-decoration: none;
 }
 .marca:hover{
-    color: #f8eeee;
-}
-.cerrar:hover{
     color: red;
 }
+.cerrar{
+    color: red;
+}
+.cerrar:hover{
+    color: #f8eeee;}
 /* Estilos generales del carrusel */
 .carrusel {
-    margin-top: 1em;
     width: 97vw;
-    height: 82vh;
+    height: 86vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +102,7 @@ header {
 /* --- Responsividad --- */
 @media screen and (max-width: 768px) {
     .marca {
-        font-size: 1.5em;
+        font-size: 1em;
         padding-left: 0.5em;
     }
     .carrusel  {
@@ -121,17 +120,18 @@ header {
     }
 }
 .contenedor {
-    width: 100%;
-    min-height: 50vh;
+    width: 95%;
+    min-height: 87vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 .gallery img {
@@ -142,7 +142,13 @@ header {
 
 .diko{
     background-image: linear-gradient(to right, rgba(8, 8, 8, 0.496), rgba(8, 8, 8, 0.137)), url(../assets/img/biografia.jpg);
-    object-fit: cover;
+    background-size: cover;
+        /* Ajusta la imagen para cubrir toda la pantalla */
+        background-position: center;
+        /* Centra la imagen */
+        background-repeat: no-repeat;
+        /* Evita que la imagen se repita */
+        min-height: 100vh;
 }
 
 .bio{
@@ -151,4 +157,16 @@ header {
     color: beige;
     font-size: 1.2em;
     letter-spacing: 0.5em;
+}
+@media screen and (max-width: 768px) {
+    .diko {
+            background-image: linear-gradient(to right, rgba(8, 8, 8, 0.686), rgba(8, 8, 8, 0.686)), url(../assets/img/biografia.jpg);
+            object-fit: cover;
+        }
+    .bio{
+        width: 380px;
+        margin-left: 10px;
+        font-size: 1em;
+        letter-spacing: 0.5em;
+    }
 }
