@@ -2,15 +2,17 @@
 
 .contenedor {
   @include d_flex(flex, column, center, center, 2em);
-  width: 85vw;
-  margin-left: 7%;
+  width: 97vw;
+  margin-left: 1%;
 }
 
 .gallery {
+  @include neo(#1c1a1a, 7px, 7px);
+  width: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin: 1.5em;
+  gap: 10px;
+  padding: 20px;
 }
 
 .gallery img {
