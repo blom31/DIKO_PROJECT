@@ -1,0 +1,67 @@
+.mosaico {
+  @include d_flex(flex, row, center, center, 2em);
+  width: 98vw;
+  height: 79vh;
+  overflow: hidden;
+  margin: 1em;
+}
+.item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  transition: flex-grow 0.5s ease;
+}
+.item img {
+  @include img(100%, 100%, cover, 0.5);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: #f8eeee;
+  font-size: 2em;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  text-decoration: none;
+}
+/* Efectos al pasar el mouse */
+.item:hover {
+  flex-grow: 2;
+  /* Hace que la imagen se expanda */
+}
+.item:hover img {
+  opacity: 1;
+  filter: contrast(120%);
+  transform: scale(1.1);
+}
+.item:hover .titulo {
+  opacity: 1;
+  /* Muestra el texto */
+  color: #d0caca;
+}
+@media screen and (max-width: 768px) {
+  .mosaico {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .item img {
+    height: 100%;
+  }
+
+  .item:hover img {
+    transform: scale(1.2);
+  }
+
+  .titulo {
+    font-size: 1em;
+  }
+}

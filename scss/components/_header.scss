@@ -1,0 +1,24 @@
+/*Estilo del header*/
+.menu {
+  @include d_flex(flex, row, space-between, center, 0.5em);
+  padding: 0 1em;
+  font-size: 2.3em;
+}
+.marca {
+  color: $color_marca;
+}
+.cerrar {
+  color: $color_cerrar;
+}
+.marca:hover {
+  color: $color_hover;
+}
+.cerrar:hover {
+  color: $color_marca;
+}
+@media screen and (max-width: 768px) {
+  .marca {
+    font-size: 0.8em;
+    padding-left: 0.5em;
+  }
+}

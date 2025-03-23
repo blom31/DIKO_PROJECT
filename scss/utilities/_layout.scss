@@ -1,0 +1,14 @@
+/*Contenedor flexible*/
+@mixin d_flex($display, $direccion, $just, $alig, $mt) {
+  display: $display;
+  flex-direction: $direccion;
+  justify-content: $just;
+  align-items: $alig;
+  margin-top: $mt;
+}
+@mixin img($ancho, $alto, $cover, $opacidad) {
+  width: $ancho;
+  height: $alto;
+  object-fit: $cover;
+  opacity: $opacidad;
+}

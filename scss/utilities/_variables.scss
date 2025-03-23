@@ -1,0 +1,44 @@
+$color_fondo: #0b0a0a;
+$color_marca: #eef0f8;
+$color_cerrar: #ff0000;
+$color_hover: #ff0000;
+
+// Definir un mapa con estilos para cada encabezado
+$heading-map: (
+  h1: (
+    2em,
+    $color_marca,
+  ),
+  h2: (
+    30px,
+    #555,
+  ),
+  h3: (
+    24px,
+    #c49029,
+  ),
+  h4: (
+    20px,
+    #999,
+  ),
+  h5: (
+    18px,
+    #bbb,
+  ),
+  h6: (
+    16px,
+    #ddd,
+  ),
+);
+
+// Crear un mixin para aplicar estilos desde el mapa
+@mixin headingStyles($heading) {
+  $styles: map-get($heading-map, $heading); // Obtener el valor del mapa
+  font-size: nth($styles, 1); // Extraer el primer valor (tamaño de fuente)
+  color: nth($styles, 2); // Extraer el segundo valor (color)
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@mixin enlaces($color) {
+  color: $color;
+}

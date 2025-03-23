@@ -1,0 +1,27 @@
+.redes ul {
+  @include d_flex(flex, row, space-between, center, 1em);
+  color: $color_marca;
+  padding: 0.5em 2em;
+}
+.enlaces {
+  @include enlaces($color_marca);
+}
+.enlaces:hover {
+  font-size: 1.1em;
+}
+.copy {
+  @include enlaces($color_marca);
+  font-weight: 100;
+}
+@media screen and (max-width: 768px) {
+  .redes ul {
+    justify-content: center;
+    padding: 0.5em 2em;
+  }
+  .enlaces {
+    margin: 4em;
+  }
+  .copy {
+    display: none;
+  }
+}

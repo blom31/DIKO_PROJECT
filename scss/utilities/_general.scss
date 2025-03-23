@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Big Shoulders Stencil", sans-serif;
+}
+body {
+  background-color: $color_fondo;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+// Aplicar el mixin a cada encabezado
+h1 {
+  @include headingStyles(h1);
+}
+h2 {
+  @include headingStyles(h2);
+}
+h3 {
+  @include headingStyles(h3);
+}
+h4 {
+  @include headingStyles(h4);
+}
+h5 {
+  @include headingStyles(h5);
+}
+h6 {
+  @include headingStyles(h6);
+}

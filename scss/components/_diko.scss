@@ -1,0 +1,31 @@
+.fondo {
+  background-image: linear-gradient(
+      to right,
+      rgba(8, 8, 8, 0.583),
+      rgba(8, 8, 8, 0.583)
+    ),
+    url(../assets/img/biografia.jpg);
+  background-size: cover;
+  /* Ajusta la imagen para cubrir toda la pantalla */
+  background-position: center;
+  /* Centra la imagen */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  min-height: 97vh;
+}
+.bio {
+  margin-left: 65%;
+  width: 442px;
+  height: 80vh;
+  color: $color_marca;
+  font-size: 1.2em;
+  letter-spacing: 0.5em;
+}
+@media screen and (max-width: 768px) {
+  .bio {
+    width: 380px;
+    margin: 1.5em;
+    font-size: 1em;
+    letter-spacing: 0.5em;
+  }
+}

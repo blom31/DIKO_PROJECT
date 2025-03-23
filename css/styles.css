@@ -1,0 +1,261 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Big Shoulders Stencil", sans-serif;
+}
+
+body {
+  background-color: #0b0a0a;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2em;
+  color: #eef0f8;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #c49029;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 20px;
+  color: #999;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 18px;
+  color: #bbb;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h6 {
+  font-size: 16px;
+  color: #ddd;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/*Contenedor flexible*/
+/*Estilo del header*/
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+  padding: 0 1em;
+  font-size: 2.3em;
+}
+
+.marca {
+  color: #eef0f8;
+}
+
+.cerrar {
+  color: #ff0000;
+}
+
+.marca:hover {
+  color: #ff0000;
+}
+
+.cerrar:hover {
+  color: #eef0f8;
+}
+
+@media screen and (max-width: 768px) {
+  .marca {
+    font-size: 0.8em;
+    padding-left: 0.5em;
+  }
+}
+.mosaico {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  width: 98vw;
+  height: 79vh;
+  overflow: hidden;
+  margin: 1em;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  transition: flex-grow 0.5s ease;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: #f8eeee;
+  font-size: 2em;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* Efectos al pasar el mouse */
+.item:hover {
+  flex-grow: 2;
+  /* Hace que la imagen se expanda */
+}
+
+.item:hover img {
+  opacity: 1;
+  filter: contrast(120%);
+  transform: scale(1.1);
+}
+
+.item:hover .titulo {
+  opacity: 1;
+  /* Muestra el texto */
+  color: #d0caca;
+}
+
+@media screen and (max-width: 768px) {
+  .mosaico {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .item img {
+    height: 100%;
+  }
+  .item:hover img {
+    transform: scale(1.2);
+  }
+  .titulo {
+    font-size: 1em;
+  }
+}
+.fondo {
+  background-image: linear-gradient(to right, rgba(8, 8, 8, 0.583), rgba(8, 8, 8, 0.583)), url(../assets/img/biografia.jpg);
+  background-size: cover;
+  /* Ajusta la imagen para cubrir toda la pantalla */
+  background-position: center;
+  /* Centra la imagen */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  min-height: 97vh;
+}
+
+.bio {
+  margin-left: 65%;
+  width: 442px;
+  height: 80vh;
+  color: #eef0f8;
+  font-size: 1.2em;
+  letter-spacing: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .bio {
+    width: 380px;
+    margin: 1.5em;
+    font-size: 1em;
+    letter-spacing: 0.5em;
+  }
+}
+/*Estilo de la galería de Viajes*/
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  width: 85vw;
+  margin-left: 7%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 2em;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.redes ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  color: #eef0f8;
+  padding: 0.5em 2em;
+}
+
+.enlaces {
+  color: #eef0f8;
+}
+
+.enlaces:hover {
+  font-size: 1.1em;
+}
+
+.copy {
+  color: #eef0f8;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+  .redes ul {
+    justify-content: center;
+    padding: 0.5em 2em;
+  }
+  .enlaces {
+    margin: 4em;
+  }
+  .copy {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

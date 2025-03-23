@@ -1,0 +1,17 @@
+/*Estilo de la galería de Viajes*/
+
+.contenedor {
+  @include d_flex(flex, column, center, center, 2em);
+  width: 85vw;
+  margin-left: 7%;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 2em;
+}
+
+.gallery img {
+  width: 100%;
+}
