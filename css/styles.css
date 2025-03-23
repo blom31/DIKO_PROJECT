@@ -1,4 +1,10 @@
 @charset "UTF-8";
+p {
+  color: #eef0f8;
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +13,7 @@
 }
 
 body {
-  background-color: #0b0a0a;
+  background-color: #171515;
 }
 
 a {
@@ -27,7 +33,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  color: #555;
+  color: #636363;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -61,6 +67,8 @@ h6 {
 }
 
 /*Contenedor flexible*/
+/*Configuracion general de img*/
+/*Configuración para aplicar neumorfismo*/
 /*Estilo del header*/
 .menu {
   display: flex;
@@ -90,17 +98,18 @@ h6 {
 }
 
 .marca {
-  background-color: #100f0f;
+  background-color: #1c1a1a;
   border-radius: 7px;
-  box-shadow: 7px 7px 14px #040404, -7px -7px 14px #211d1d;
+  box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
   width: 240px;
+  height: 50px;
   padding: 0.1em;
 }
 
 .cerrar {
-  background-color: #100f0f;
+  background-color: #1c1a1a;
   border-radius: 7px;
-  box-shadow: 7px 7px 14px #040404, -7px -7px 14px #211d1d;
+  box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
   width: 40px;
   padding: 0.1em;
 }
@@ -204,19 +213,45 @@ h6 {
   margin-left: 65%;
   width: 442px;
   height: 80vh;
-  color: #eef0f8;
-  font-size: 1.2em;
-  letter-spacing: 0.5em;
+  margin-top: 2em;
 }
 
 @media screen and (max-width: 768px) {
   .bio {
     width: 380px;
     margin: 1.5em;
-    font-size: 1em;
-    letter-spacing: 0.5em;
   }
 }
+/*Sección Documental*/
+.documental {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  width: 98vw;
+  height: 67vh;
+  margin-left: 0.6em;
+}
+
+.documental {
+  background-color: #1c1a1a;
+  border-radius: 7px;
+  box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
+}
+
+.video {
+  width: 30%;
+  padding: 1em;
+}
+
+.descripcion {
+  width: 55%;
+  height: 95%;
+  padding: 1em;
+  overflow-y: auto;
+}
+
 /*Estilo de la galería de Viajes*/
 .contenedor {
   display: flex;
@@ -265,8 +300,8 @@ h6 {
 .enlaces {
   background-color: #100f0f;
   border-radius: 4px;
-  box-shadow: 7px 7px 14px #040404, -7px -7px 14px #211d1d;
-  padding: 0 10px;
+  box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
+  padding: 1px 10px;
 }
 
 @media screen and (max-width: 768px) {

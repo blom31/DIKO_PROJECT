@@ -1,4 +1,4 @@
-$color_fondo: #0b0a0a;
+$color_fondo: #171515;
 $color_marca: #eef0f8;
 $color_cerrar: #ff0000;
 $color_hover: #ff0000;
@@ -11,7 +11,7 @@ $heading-map: (
   ),
   h2: (
     30px,
-    #555,
+    #636363,
   ),
   h3: (
     24px,
@@ -30,6 +30,11 @@ $heading-map: (
     #ddd,
   ),
 );
+p {
+  color: $color_marca;
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+}
 
 // Crear un mixin para aplicar estilos desde el mapa
 @mixin headingStyles($heading) {

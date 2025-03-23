@@ -6,14 +6,17 @@
   align-items: $alig;
   margin-top: $mt;
 }
+/*Configuracion general de img*/
 @mixin img($ancho, $alto, $cover, $opacidad) {
   width: $ancho;
   height: $alto;
   object-fit: $cover;
   opacity: $opacidad;
 }
+/*Configuración para aplicar neumorfismo*/
 @mixin neo($bg, $b_radio, $eje) {
   background-color: $bg;
   border-radius: $b_radio;
-  box-shadow: $eje $eje ($eje * 2) #040404, (-$eje) (-$eje) ($eje * 2) #211d1d;
+  box-shadow: inset $eje $eje ($eje * 2) #040404,
+    inset (-$eje) (-$eje) ($eje * 2) #222020;
 }
