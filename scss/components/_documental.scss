@@ -18,3 +18,21 @@
   padding: 1em;
   overflow-y: auto;
 }
+@media screen and (max-width: 768px) {
+  .documental {
+    width: 100vw;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  .video,
+  iframe {
+    width: 100%;
+  }
+
+  .descripcion {
+    width: 98%;
+    height: 15em;
+    overflow-y: auto;
+  }
+}
