@@ -78,6 +78,7 @@ h6 {
 
 .cerrar {
   color: #ff0000;
+  text-align: center;
 }
 
 .marca:hover {
@@ -86,6 +87,22 @@ h6 {
 
 .cerrar:hover {
   color: #eef0f8;
+}
+
+.marca {
+  background-color: #100f0f;
+  border-radius: 7px;
+  box-shadow: 7px 7px 14px #040404, -7px -7px 14px #211d1d;
+  width: 240px;
+  padding: 0.1em;
+}
+
+.cerrar {
+  background-color: #100f0f;
+  border-radius: 7px;
+  box-shadow: 7px 7px 14px #040404, -7px -7px 14px #211d1d;
+  width: 40px;
+  padding: 0.1em;
 }
 
 @media screen and (max-width: 768px) {
@@ -103,7 +120,7 @@ h6 {
   width: 98vw;
   height: 79vh;
   overflow: hidden;
-  margin: 1em;
+  margin: 0.5em;
 }
 
 .item {
@@ -215,7 +232,7 @@ h6 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin: 2em;
+  margin: 1.5em;
 }
 
 .gallery img {
@@ -243,6 +260,13 @@ h6 {
 .copy {
   color: #eef0f8;
   font-weight: 100;
+}
+
+.enlaces {
+  background-color: #100f0f;
+  border-radius: 4px;
+  box-shadow: 7px 7px 14px #040404, -7px -7px 14px #211d1d;
+  padding: 0 10px;
 }
 
 @media screen and (max-width: 768px) {

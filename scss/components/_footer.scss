@@ -13,6 +13,11 @@
   @include enlaces($color_marca);
   font-weight: 100;
 }
+.enlaces {
+  @include neo(#100f0f, 4px, 7px);
+  padding: 0 10px;
+}
+
 @media screen and (max-width: 768px) {
   .redes ul {
     justify-content: center;

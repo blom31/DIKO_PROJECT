@@ -9,6 +9,7 @@
 }
 .cerrar {
   color: $color_cerrar;
+  text-align: center;
 }
 .marca:hover {
   color: $color_hover;
@@ -16,6 +17,17 @@
 .cerrar:hover {
   color: $color_marca;
 }
+.marca {
+  @include neo(#100f0f, 7px, 7px);
+  width: 240px;
+  padding: 0.1em;
+}
+.cerrar {
+  @include neo(#100f0f, 7px, 7px);
+  width: 40px;
+  padding: 0.1em;
+}
+
 @media screen and (max-width: 768px) {
   .marca {
     font-size: 0.8em;
