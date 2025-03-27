@@ -3,7 +3,7 @@
 .contenedor {
   @include d_flex(flex, column, center, center, 2em);
   width: 97vw;
-  margin-left: 1%;
+  margin: auto;
 }
 
 .gallery {
@@ -11,10 +11,33 @@
   width: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
+  gap: 15px;
   padding: 20px;
 }
 
 .gallery img {
-  width: 100%;
+  @include img(100%, 200px, cover, 1);
+  border-radius: 5px;
+}
+// Media Queries para mejor adaptación
+@media (min-width: 1065px) {
+  .gallery {
+    max-width: 1200px; /* Limita el ancho máximo */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* Más columnas */
+    gap: 20px; /* Mayor separación en pantallas grandes */
+  }
+}
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; // Una sola imagen por fila en móviles
+  }
 }

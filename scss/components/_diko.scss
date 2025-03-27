@@ -11,17 +11,55 @@
   /* Centra la imagen */
   background-repeat: no-repeat;
   /* Evita que la imagen se repita */
-  min-height: 97vh;
+  min-height: 67vh;
 }
 .bio {
   margin-left: 65%;
-  width: 442px;
-  height: 80vh;
-  margin-top: 2em;
+  // width: 442px;
+  min-height: 79.5vh;
+  // margin-top: 2em;
+  width: 30%; /* Ancho aún más reducido para pantallas grandes */
+  max-width: 600px; /* Limita el ancho máximo */
+  font-size: 1.1em; /* Ajuste en el tamaño de la fuente */
+  padding: 1.5em;
 }
+// @media screen and (max-width: 768px) {
+//   .bio {
+//     width: 380px;
+//     margin: 1.5em;
+//   }
+// }
+// Breakpoint para dispositivos móviles (320px - 768px)
 @media screen and (max-width: 768px) {
   .bio {
-    width: 380px;
-    margin: 1.5em;
+    width: 95%; /* Aumenta el ancho en dispositivos pequeños */
+    margin: 1.5em auto;
+    font-size: 0.95em; /* Ajuste de tamaño de fuente */
   }
 }
+
+// Breakpoint para tabletas y pantallas de tamaño medio (768px - 1024px)
+@media screen and (max-width: 1024px) {
+  .bio {
+    width: 442px; /* Ajusta el ancho para pantallas medianas */
+    margin: 2em auto;
+  }
+}
+
+// Breakpoint para laptops o pantallas de escritorio pequeñas (1024px - 1200px)
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .bio {
+    width: 75%; /* Reduce el ancho para pantallas más grandes */
+    padding: 2em;
+  }
+}
+
+// Breakpoint para pantallas grandes (> 1200px)
+// @media screen and (min-width: 1200px) {
+//   .bio {
+//     // width: 30%; /* Ancho aún más reducido para pantallas grandes */
+//     // max-width: 600px; /* Limita el ancho máximo */
+//     // font-size: 1.1em; /* Ajuste en el tamaño de la fuente */
+//     // padding: 1.5em;
+//   }
+//}

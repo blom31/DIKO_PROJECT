@@ -1,16 +1,19 @@
 /*Sección Documental*/
 .documental {
   @include d_flex(flex, row, space-between, center, 0);
-  width: 98vw;
-  height: 67vh;
-  margin-left: 0.6em;
-}
-.documental {
   @include neo(#1c1a1a, 7px, 7px);
+  width: 98vw;
+  min-height: 67vh;
 }
+
 .video {
-  width: 30%;
+  width: 50%;
   padding: 1em;
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Hace el video responsivo */
+  }
 }
 .descripcion {
   width: 55%;
@@ -18,12 +21,14 @@
   padding: 1em;
   overflow-y: auto;
 }
+
+/*responsividad*/
+
 @media screen and (max-width: 768px) {
   .documental {
-    width: 100vw;
     flex-direction: column;
-    height: auto;
-    width: auto;
+    width: 100vw;
+    min-height: auto;
   }
   .video,
   iframe {
