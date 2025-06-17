@@ -1,13 +1,14 @@
+@use "../utilities/utilities" as utils;
 /*Estilo de la galería de Viajes*/
 
 .contenedor {
-  @include d_flex(flex, column, center, center, 2em);
+  @include utils.d_flex(flex, column, center, center, 2em);
   width: 97vw;
   margin: auto;
 }
 
 .gallery {
-  @include neo(#1c1a1a, 7px, 7px);
+  @include utils.neo(#1c1a1a, 7px, 7px);
   width: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -16,7 +17,7 @@
 }
 
 .gallery img {
-  @include img(100%, 200px, cover, 1);
+  @include utils.img(100%, 200px, cover, 1);
   border-radius: 5px;
 }
 // Media Queries para mejor adaptación

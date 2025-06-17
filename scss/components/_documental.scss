@@ -1,7 +1,8 @@
+@use "../utilities/utilities" as utils;
 /*Sección Documental*/
 .documental {
-  @include d_flex(flex, row, space-between, center, 0);
-  @include neo(#1c1a1a, 7px, 7px);
+  @include utils.d_flex(flex, row, space-between, center, 0);
+  @include utils.neo(#1c1a1a, 7px, 7px);
   width: 98vw;
   min-height: 67vh;
 }

@@ -1,11 +1,7 @@
 @charset "UTF-8";
-
-p {
-  color: #eef0f8;
-  letter-spacing: 0.2em;
-  line-height: 1.6;
-}
-
+/*Contenedor flexible*/
+/*Configuracion general de img*/
+/*Configuración para aplicar neumorfismo*/
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +19,12 @@ a {
 
 li {
   list-style: none;
+}
+
+p {
+  color: #eef0f8;
+  letter-spacing: 0.2em;
+  line-height: 1.6;
 }
 
 h1 {
@@ -67,9 +69,6 @@ h6 {
   margin-bottom: 10px;
 }
 
-/*Contenedor flexible*/
-/*Configuracion general de img*/
-/*Configuración para aplicar neumorfismo*/
 /*Estilo del header*/
 .menu {
   display: flex;
@@ -121,7 +120,6 @@ h6 {
     width: 200px;
   }
 }
-
 .mosaico {
   display: flex;
   flex-direction: row;
@@ -190,20 +188,16 @@ h6 {
     flex-direction: column;
     height: 100vh;
   }
-
   .item img {
     height: 100%;
   }
-
   .item:hover img {
     transform: scale(1.2);
   }
-
   .titulo {
     font-size: 1em;
   }
 }
-
 .fondo {
   background-image: linear-gradient(to right, rgba(8, 8, 8, 0.583), rgba(8, 8, 8, 0.583)), url(../assets/img/biografia.jpg);
   background-size: cover;
@@ -218,41 +212,31 @@ h6 {
 .bio {
   margin-left: 65%;
   min-height: 79.5vh;
-  width: 30%;
-  /* Ancho aún más reducido para pantallas grandes */
-  max-width: 600px;
-  /* Limita el ancho máximo */
-  font-size: 1.1em;
-  /* Ajuste en el tamaño de la fuente */
+  width: 30%; /* Ancho aún más reducido para pantallas grandes */
+  max-width: 600px; /* Limita el ancho máximo */
+  font-size: 1.1em; /* Ajuste en el tamaño de la fuente */
   padding: 1.5em;
 }
 
 @media screen and (max-width: 768px) {
   .bio {
-    width: 95%;
-    /* Aumenta el ancho en dispositivos pequeños */
+    width: 95%; /* Aumenta el ancho en dispositivos pequeños */
     margin: 1.5em auto;
-    font-size: 0.95em;
-    /* Ajuste de tamaño de fuente */
+    font-size: 0.95em; /* Ajuste de tamaño de fuente */
   }
 }
-
 @media screen and (max-width: 1024px) {
   .bio {
-    width: 442px;
-    /* Ajusta el ancho para pantallas medianas */
+    width: 442px; /* Ajusta el ancho para pantallas medianas */
     margin: 2em auto;
   }
 }
-
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
   .bio {
-    width: 75%;
-    /* Reduce el ancho para pantallas más grandes */
+    width: 75%; /* Reduce el ancho para pantallas más grandes */
     padding: 2em;
   }
 }
-
 /*Sección Documental*/
 .documental {
   display: flex;
@@ -271,11 +255,9 @@ h6 {
   width: 50%;
   padding: 1em;
 }
-
 .video iframe {
   width: 100%;
-  aspect-ratio: 16/9;
-  /* Hace el video responsivo */
+  aspect-ratio: 16/9; /* Hace el video responsivo */
 }
 
 .descripcion {
@@ -292,19 +274,16 @@ h6 {
     width: 100vw;
     min-height: auto;
   }
-
   .video,
   iframe {
     width: 100%;
   }
-
   .descripcion {
     width: 98%;
     height: 15em;
     overflow-y: auto;
   }
 }
-
 /*Estilo de la galería de Viajes*/
 .contenedor {
   display: flex;
@@ -337,27 +316,21 @@ h6 {
 
 @media (min-width: 1065px) {
   .gallery {
-    max-width: 1200px;
-    /* Limita el ancho máximo */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* Más columnas */
-    gap: 20px;
-    /* Mayor separación en pantallas grandes */
+    max-width: 1200px; /* Limita el ancho máximo */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Más columnas */
+    gap: 20px; /* Mayor separación en pantallas grandes */
   }
 }
-
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
-
 @media (max-width: 480px) {
   .gallery {
     grid-template-columns: 1fr;
   }
 }
-
 .redes ul {
   display: flex;
   flex-direction: row;
@@ -386,11 +359,9 @@ h6 {
     justify-content: center;
     padding: 0.5em 2em;
   }
-
   .enlaces {
     margin: 4em;
   }
-
   .copy {
     display: none;
   }

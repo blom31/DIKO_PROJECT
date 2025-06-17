@@ -1,3 +1,4 @@
+@use "./variables" as v;
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +6,7 @@
   font-family: "Big Shoulders Stencil", sans-serif;
 }
 body {
-  background-color: $color_fondo;
+  background-color: v.$color_fondo;
 }
 a {
   text-decoration: none;
@@ -13,23 +14,28 @@ a {
 li {
   list-style: none;
 }
+p {
+  color: v.$color_marca;
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+}
 
 // Aplicar el mixin a cada encabezado
 h1 {
-  @include headingStyles(h1);
+  @include v.headingStyles(h1);
 }
 h2 {
-  @include headingStyles(h2);
+  @include v.headingStyles(h2);
 }
 h3 {
-  @include headingStyles(h3);
+  @include v.headingStyles(h3);
 }
 h4 {
-  @include headingStyles(h4);
+  @include v.headingStyles(h4);
 }
 h5 {
-  @include headingStyles(h5);
+  @include v.headingStyles(h5);
 }
 h6 {
-  @include headingStyles(h6);
+  @include v.headingStyles(h6);
 }

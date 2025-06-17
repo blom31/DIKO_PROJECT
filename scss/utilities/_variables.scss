@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "sass:list";
+
 $color_fondo: #171515;
 $color_marca: #eef0f8;
 $color_cerrar: #ff0000;
@@ -30,17 +33,12 @@ $heading-map: (
     #ddd,
   ),
 );
-p {
-  color: $color_marca;
-  letter-spacing: 0.2em;
-  line-height: 1.6;
-}
 
 // Crear un mixin para aplicar estilos desde el mapa
 @mixin headingStyles($heading) {
-  $styles: map-get($heading-map, $heading); // Obtener el valor del mapa
-  font-size: nth($styles, 1); // Extraer el primer valor (tamaño de fuente)
-  color: nth($styles, 2); // Extraer el segundo valor (color)
+  $styles: map.get($heading-map, $heading); // Obtener el valor del mapa
+  font-size: list.nth($styles, 1); // Extraer el primer valor (tamaño de fuente)
+  color: list.nth($styles, 2); // Extraer el segundo valor (color)
   font-weight: bold;
   margin-bottom: 10px;
 }

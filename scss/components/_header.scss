@@ -1,29 +1,31 @@
+@use "../utilities/utilities" as utils;
+
 /*Estilo del header*/
 .menu {
-  @include d_flex(flex, row, space-between, center, 0.5em);
+  @include utils.d_flex(flex, row, space-between, center, 0.5em);
   padding: 0 1em;
   font-size: 2.3em;
 }
 .marca {
-  color: $color_marca;
+  color: utils.$color_marca;
   width: 240px;
   padding: 0.1em;
 }
 .cerrar {
-  color: $color_cerrar;
+  color: utils.$color_cerrar;
   text-align: center;
 }
 .marca:hover {
-  color: $color_hover;
+  color: utils.$color_hover;
 }
 .cerrar:hover {
-  color: $color_marca;
+  color: utils.$color_marca;
 }
 .marca {
-  @include neo(#1c1a1a, 7px, 7px);
+  @include utils.neo(#1c1a1a, 7px, 7px);
 }
 .cerrar {
-  @include neo(#1c1a1a, 7px, 7px);
+  @include utils.neo(#1c1a1a, 7px, 7px);
   width: 40px;
   padding: 0.1em;
 }
