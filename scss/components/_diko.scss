@@ -1,3 +1,5 @@
+@use "../utilities/utilities" as utils;
+
 .fondo {
   background-image: linear-gradient(
       to right,
@@ -13,6 +15,13 @@
   /* Evita que la imagen se repita */
   min-height: 67vh;
 }
+.prof {
+  color: utils.$color_texto_sec;
+  margin-left: 3em;
+}
+.contacto {
+  color: utils.$color_hover;
+}
 .bio {
   margin-left: 65%;
   // width: 442px;
@@ -21,7 +30,7 @@
   width: 30%; /* Ancho aún más reducido para pantallas grandes */
   max-width: 600px; /* Limita el ancho máximo */
   font-size: 1.1em; /* Ajuste en el tamaño de la fuente */
-  padding: 1.5em;
+  padding: 1.4em;
 }
 // @media screen and (max-width: 768px) {
 //   .bio {

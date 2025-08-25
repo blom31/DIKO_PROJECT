@@ -27,26 +27,23 @@
     </header>
     <main>
         <section class="biografia container mt-3">
-            <div>
-                <p class="prof">Realizador Audiovisual | Fotógrafo Independiente</p>
-            </div>
-            <div class="bio">
-                <p>Soy Darwin Dikó Cañas, realizador audiovisual, documentalista y fotógrafo
-                    independiente. A través de mi trabajo, busco contar historias que capturen la esencia humana y
-                    revelen perspectivas únicas
-                    del mundo.
-                </p>
-                <p>
-                    Mi viaje me ha llevado a producir el documental Musawat, una inmersión profunda en la inclusión
-                    en los campamentos
-                    saharauis.
-                </p>
-                <p>Con cada proyecto, mi objetivo es crear piezas que no solo informen, sino que también
-                    inspiren a la reflexión
-                    y la conexión.</p>
-                <p class="contacto">+58 412 6320866</p>
-                <p class="contacto">darwincanas254@gmail.com</p>
-            </div>
+            <form id="contactForm" action="URL_DEL_SERVIDOR_AQUI" method="POST">
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
         </section>
     </main>
     <footer>
@@ -58,9 +55,11 @@
                 <li>
                     <a class="enlaces" href="https://www.facebook.com/darwin.d.betancourt" target="_blank">Facebook</a>
                 </li>
-
                 <li>
-                    <a class="copy" href="">&copy;2025 by Olga Betancourt</a>
+                    <a class="enlaces" href="">Contacto</a>
+                </li>
+                <li>
+                    <a class=" copy" href="">&copy;2025 by Olga Betancourt</a>
                 </li>
             </ul>
         </div>
