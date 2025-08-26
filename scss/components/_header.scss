@@ -2,13 +2,13 @@
 
 /*Estilo del header*/
 .menu {
-  @include utils.d_flex(flex, row, space-between, center, 0.5em);
+  @include utils.d_flex(flex, row, space-between, center, 0.3em);
   padding: 0 1em;
   font-size: 2.3em;
 }
 .marca {
   color: utils.$color_marca;
-  width: 240px;
+  width: 200px;
   padding: 0.1em;
 }
 .cerrar {

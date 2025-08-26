@@ -9,13 +9,15 @@
   @include utils.enlaces(utils.$color_marca);
 }
 .enlaces:hover {
-  font-size: 1.1em;
+  color: utils.$color_hover;
 }
 .copy {
   @include utils.enlaces(utils.$color_marca);
+}
+.developer {
+  color: utils.$color_marca;
   font-weight: 100;
 }
-
 @media screen and (max-width: 768px) {
   .redes ul {
     justify-content: center;
