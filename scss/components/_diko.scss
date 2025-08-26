@@ -13,62 +13,40 @@
   /* Centra la imagen */
   background-repeat: no-repeat;
   /* Evita que la imagen se repita */
-  min-height: 67vh;
+  min-height: 100dvh; // Altura real del viewport visible
 }
 .prof {
   color: utils.$color_texto_sec;
   margin-left: 3em;
+  // font-size: clamp(1rem, 2.5vw, 2rem); // Tamaño responsivo sin media queries
+  font-size: 1.1em;
 }
 .contacto {
   color: utils.$color_hover;
 }
 .bio {
-  margin-left: 65%;
-  // width: 442px;
-  min-height: 79.5vh;
-  // margin-top: 2em;
-  width: 30%; /* Ancho aún más reducido para pantallas grandes */
-  max-width: 600px; /* Limita el ancho máximo */
-  font-size: 1.1em; /* Ajuste en el tamaño de la fuente */
+  width: clamp(280px, 30%, 600px); // Ancho flexible entre móviles y desktop
+  margin: 1.5em auto;
+  font-size: clamp(0.95em, 1.5vw, 1.1em); // Tamaño de fuente responsivo
   padding: 1.4em;
+  min-height: 100dvh; // Altura completa del viewport visible
+  margin-left: auto;
+  margin-right: 0;
 }
-// @media screen and (max-width: 768px) {
-//   .bio {
-//     width: 380px;
-//     margin: 1.5em;
-//   }
-// }
-// Breakpoint para dispositivos móviles (320px - 768px)
-@media screen and (max-width: 768px) {
+.contacto-bloque {
+  text-align: right;
+  margin-top: auto;
+  padding: 1em 2em;
+  font-size: clamp(0.9em, 1.2vw, 1em);
+  color: utils.$color_hover;
+
+  //  que quede pegado al footer visualmente:
+  position: relative;
+  top: 2dvh; // Ajusta según lo que veas en pantalla
+}
+// Media query mínima para ajustar padding en móviles
+@media (max-width: 768px) {
   .bio {
-    width: 95%; /* Aumenta el ancho en dispositivos pequeños */
-    margin: 1.5em auto;
-    font-size: 0.95em; /* Ajuste de tamaño de fuente */
+    padding: 1em;
   }
 }
-
-// Breakpoint para tabletas y pantallas de tamaño medio (768px - 1024px)
-@media screen and (max-width: 1024px) {
-  .bio {
-    width: 442px; /* Ajusta el ancho para pantallas medianas */
-    margin: 2em auto;
-  }
-}
-
-// Breakpoint para laptops o pantallas de escritorio pequeñas (1024px - 1200px)
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-  .bio {
-    width: 75%; /* Reduce el ancho para pantallas más grandes */
-    padding: 2em;
-  }
-}
-
-// Breakpoint para pantallas grandes (> 1200px)
-// @media screen and (min-width: 1200px) {
-//   .bio {
-//     // width: 30%; /* Ancho aún más reducido para pantallas grandes */
-//     // max-width: 600px; /* Limita el ancho máximo */
-//     // font-size: 1.1em; /* Ajuste en el tamaño de la fuente */
-//     // padding: 1.5em;
-//   }
-//}
