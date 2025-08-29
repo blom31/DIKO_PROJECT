@@ -30,14 +30,15 @@
     gap: 20px; /* Mayor separación en pantallas grandes */
   }
 }
-@media (max-width: 768px) {
+@media screen and (width<=600px) {
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; /* Menor separación en pantallas pequeñas */
   }
 }
 
-@media (max-width: 480px) {
-  .gallery {
-    grid-template-columns: 1fr; // Una sola imagen por fila en móviles
-  }
-}
+// @media (max-width: 480px) {
+//   .gallery {
+//     grid-template-columns: 1fr; // Una sola imagen por fila en móviles
+//   }
+// }

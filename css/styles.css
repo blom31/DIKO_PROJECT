@@ -126,11 +126,10 @@ h6 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 2em;
+  margin-top: 0.5em;
   width: 98vw;
   height: 79vh;
   overflow: hidden;
-  margin: 0.5em;
 }
 
 .item {
@@ -184,7 +183,7 @@ h6 {
   color: #d0caca;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 600px) {
   .mosaico {
     flex-direction: column;
     height: 100vh;
@@ -328,14 +327,10 @@ h6 {
     gap: 20px; /* Mayor separación en pantallas grandes */
   }
 }
-@media (max-width: 768px) {
+@media screen and (width <= 600px) {
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
-@media (max-width: 480px) {
-  .gallery {
-    grid-template-columns: 1fr;
+    gap: 10px; /* Menor separación en pantallas pequeñas */
   }
 }
 .redes ul {

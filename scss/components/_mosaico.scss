@@ -1,11 +1,10 @@
 @use "../utilities/utilities" as utils;
 
 .mosaico {
-  @include utils.d_flex(flex, row, center, center, 2em);
+  @include utils.d_flex(flex, row, center, center, 0.5em);
   width: 98vw;
   height: 79vh;
   overflow: hidden;
-  margin: 0.5em;
 }
 .item {
   position: relative;
@@ -49,7 +48,7 @@
   /* Muestra el texto */
   color: #d0caca;
 }
-@media screen and (max-width: 768px) {
+@media screen and (width<=600px) {
   .mosaico {
     flex-direction: column;
     height: 100vh;
