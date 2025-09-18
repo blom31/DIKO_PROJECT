@@ -3,7 +3,7 @@
 .fondo {
   background-image: linear-gradient(
       to right,
-      rgba(8, 8, 8, 0.583),
+      rgba(12, 12, 12, 0.148),
       rgba(8, 8, 8, 0.583)
     ),
     url(../assets/img/biografia.jpg);
@@ -16,19 +16,16 @@
   min-height: 100dvh; // Altura real del viewport visible
 }
 .prof {
-  color: utils.$color_texto_sec;
-  margin-left: 3em;
+  color: utils.$color_fondo;
+  margin-left: 2em;
   // font-size: clamp(1rem, 2.5vw, 2rem); // Tamaño responsivo sin media queries
   font-size: 1.1em;
 }
-.contacto {
-  color: utils.$color_hover;
-}
 .bio {
-  width: clamp(280px, 30%, 600px); // Ancho flexible entre móviles y desktop
-  margin: 1.5em auto;
+  width: clamp(300px, 30%, 600px); // Ancho flexible entre móviles y desktop
+  margin: 1em auto;
   font-size: clamp(0.95em, 1.5vw, 1.1em); // Tamaño de fuente responsivo
-  padding: 1.4em;
+  // padding: 1em;
   min-height: 100dvh; // Altura completa del viewport visible
   margin-left: auto;
   margin-right: 0;
@@ -37,14 +34,16 @@
   text-align: right;
   margin-top: auto;
   padding: 1em 2em;
-  font-size: clamp(0.9em, 1.2vw, 1em);
-  color: utils.$color_hover;
-
+  font-size: 1.1em;
   //  que quede pegado al footer visualmente:
   position: relative;
   top: 2dvh; // Ajusta según lo que veas en pantalla
 }
-// Media query mínima para ajustar padding en móviles
+.contacto {
+  color: utils.$color_fondo;
+
+  // Media query mínima para ajustar padding en móviles
+}
 @media (max-width: 768px) {
   .bio {
     padding: 1em;
