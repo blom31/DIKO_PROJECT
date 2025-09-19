@@ -28,13 +28,25 @@
 .cerrar {
   @include utils.neo(#1c1a1a, 7px, 7px);
   width: 40px;
-  padding: 0.1em;
 }
 
-@media screen and (max-width: 768px) {
+// @media screen and (max-width: 768px) {
+//   .menu {
+//     justify-content: space-around;
+//     padding: 0;
+//   }
+//   .marca {
+//     font-size: 0.8em;
+//     width: auto;
+//   }
+// }
+@media (max-width: 320px) {
+  .menu {
+    justify-content: space-around;
+    padding: 0;
+  }
   .marca {
     font-size: 0.8em;
-    padding-left: 0.5em;
-    width: 200px;
+    width: auto;
   }
 }

@@ -6,7 +6,7 @@
       rgba(12, 12, 12, 0.148),
       rgba(8, 8, 8, 0.583)
     ),
-    url(../assets/img/biografia.jpg);
+    url(https://res.cloudinary.com/dv9yjyclh/image/upload/v1758240722/biografia_lqkyjx.jpg);
   background-size: cover;
   /* Ajusta la imagen para cubrir toda la pantalla */
   background-position: center;
@@ -17,15 +17,17 @@
 }
 .prof {
   color: utils.$color_fondo;
-  margin-left: 2em;
+  margin: 1em auto;
   // font-size: clamp(1rem, 2.5vw, 2rem); // Tamaño responsivo sin media queries
   font-size: 1.1em;
 }
+.foto {
+  display: none;
+}
 .bio {
-  width: clamp(300px, 30%, 600px); // Ancho flexible entre móviles y desktop
+  width: clamp(280px, 30%, 600px); // Ancho flexible entre móviles y desktop
   margin: 1em auto;
   font-size: clamp(0.95em, 1.5vw, 1.1em); // Tamaño de fuente responsivo
-  // padding: 1em;
   min-height: 100dvh; // Altura completa del viewport visible
   margin-left: auto;
   margin-right: 0;
@@ -46,6 +48,55 @@
 }
 @media (max-width: 768px) {
   .bio {
-    padding: 1em;
+    width: 95vw;
+    margin: 1em auto;
+    font-size: 1em;
+    padding: 0.5em;
+    overflow-y: auto;
+    height: 5em;
+  }
+  .prof {
+    margin-left: 0.5em;
+    font-size: 1em;
+    text-align: left;
+  }
+  .contacto-bloque {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    top: 0;
+  }
+  .fondo {
+    min-height: 60vh;
+    padding-bottom: 2em;
+  }
+  .contacto {
+    color: utils.$color_hover;
+  }
+}
+@media (max-width: 320px) {
+  .fondo {
+    background-image: none;
+    background-color: utils.$color_fondo;
+  }
+  .prof {
+    color: utils.$color_marca;
+  }
+  .foto {
+    display: block;
+    @include utils.neo(#1c1a1a, 10px, 10px);
+    width: 300px;
+    margin-left: 0.5em;
+    text-align: center;
+  }
+  .foto img {
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+  .bio {
+    margin-left: 0.5em;
+    overflow-y: auto;
   }
 }

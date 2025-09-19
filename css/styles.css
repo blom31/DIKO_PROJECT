@@ -111,14 +111,16 @@ h6 {
   border-radius: 7px;
   box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
   width: 40px;
-  padding: 0.1em;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 320px) {
+  .menu {
+    justify-content: space-around;
+    padding: 0;
+  }
   .marca {
     font-size: 0.8em;
-    padding-left: 0.5em;
-    width: 200px;
+    width: auto;
   }
 }
 .mosaico {
@@ -199,7 +201,7 @@ h6 {
   }
 }
 .fondo {
-  background-image: linear-gradient(to right, rgba(12, 12, 12, 0.148), rgba(8, 8, 8, 0.583)), url(../assets/img/biografia.jpg);
+  background-image: linear-gradient(to right, rgba(12, 12, 12, 0.148), rgba(8, 8, 8, 0.583)), url(https://res.cloudinary.com/dv9yjyclh/image/upload/v1758240722/biografia_lqkyjx.jpg);
   background-size: cover;
   /* Ajusta la imagen para cubrir toda la pantalla */
   background-position: center;
@@ -211,12 +213,16 @@ h6 {
 
 .prof {
   color: #171515;
-  margin-left: 2em;
+  margin: 1em auto;
   font-size: 1.1em;
 }
 
+.foto {
+  display: none;
+}
+
 .bio {
-  width: clamp(300px, 30%, 600px);
+  width: clamp(280px, 30%, 600px);
   margin: 1em auto;
   font-size: clamp(0.95em, 1.5vw, 1.1em);
   min-height: 100dvh;
@@ -239,7 +245,58 @@ h6 {
 
 @media (max-width: 768px) {
   .bio {
-    padding: 1em;
+    width: 95vw;
+    margin: 1em auto;
+    font-size: 1em;
+    padding: 0.5em;
+    overflow-y: auto;
+    height: 5em;
+  }
+  .prof {
+    margin-left: 0.5em;
+    font-size: 1em;
+    text-align: left;
+  }
+  .contacto-bloque {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    top: 0;
+  }
+  .fondo {
+    min-height: 60vh;
+    padding-bottom: 2em;
+  }
+  .contacto {
+    color: #ff0000;
+  }
+}
+@media (max-width: 320px) {
+  .fondo {
+    background-image: none;
+    background-color: #171515;
+  }
+  .prof {
+    color: #eef0f8;
+  }
+  .foto {
+    display: block;
+    background-color: #1c1a1a;
+    border-radius: 10px;
+    box-shadow: inset 10px 10px 20px #040404, inset -10px -10px 20px #222020;
+    width: 300px;
+    margin-left: 0.5em;
+    text-align: center;
+  }
+  .foto img {
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+  .bio {
+    margin-left: 0.5em;
+    overflow-y: auto;
   }
 }
 /*Sección Documental*/
@@ -331,13 +388,14 @@ h6 {
     gap: 10px; /* Menor separación en pantallas pequeñas */
   }
 }
-.redes ul {
+.redes {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 1em;
   color: #eef0f8;
+  background-color: rgb(128, 105, 255);
   padding: 0.5em 2em;
 }
 
