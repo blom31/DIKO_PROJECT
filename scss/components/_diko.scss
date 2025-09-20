@@ -3,8 +3,8 @@
 .fondo {
   background-image: linear-gradient(
       to right,
-      rgba(12, 12, 12, 0.148),
-      rgba(8, 8, 8, 0.583)
+      rgba(12, 12, 12, 0.512),
+      rgba(8, 8, 8, 0.355)
     ),
     url(https://res.cloudinary.com/dv9yjyclh/image/upload/v1758394158/biografia_lqkyjx.jpg);
   background-size: cover;
@@ -21,6 +21,12 @@
   margin-left: 1.5em;
   // font-size: clamp(1rem, 2.5vw, 2rem); // Tamaño responsivo sin media queries
   font-size: 1.1em;
+}
+.prof_separa {
+  color: utils.$color_hover;
+}
+.prof_responsive {
+  display: none;
 }
 .foto {
   display: none;
@@ -52,7 +58,7 @@
   }
 
   .contacto {
-    color: utils.$color_hover;
+    color: utils.$color_contacto;
   }
 }
 @media screen and (width <= 600px) {
@@ -62,7 +68,14 @@
   }
   .prof {
     width: 100%;
-    margin-left: 0;
+    color: utils.$color_marca;
+  }
+
+  .prof_span {
+    display: none;
+  }
+  .prof_responsive {
+    margin-left: 5.5em;
     color: utils.$color_marca;
   }
   .biografia {

@@ -201,7 +201,7 @@ h6 {
   }
 }
 .fondo {
-  background-image: linear-gradient(to right, rgba(12, 12, 12, 0.148), rgba(8, 8, 8, 0.583)), url(https://res.cloudinary.com/dv9yjyclh/image/upload/v1758394158/biografia_lqkyjx.jpg);
+  background-image: linear-gradient(to right, rgba(12, 12, 12, 0.512), rgba(8, 8, 8, 0.355)), url(https://res.cloudinary.com/dv9yjyclh/image/upload/v1758394158/biografia_lqkyjx.jpg);
   background-size: cover;
   /* Ajusta la imagen para cubrir toda la pantalla */
   background-position: center;
@@ -215,6 +215,14 @@ h6 {
   margin-top: 0.5em;
   margin-left: 1.5em;
   font-size: 1.1em;
+}
+
+.prof_separa {
+  color: #ff0000;
+}
+
+.prof_responsive {
+  display: none;
 }
 
 .foto {
@@ -247,7 +255,7 @@ h6 {
     text-align: left;
   }
   .contacto {
-    color: #ff0000;
+    color: #999595;
   }
 }
 @media screen and (width <= 600px) {
@@ -257,7 +265,13 @@ h6 {
   }
   .prof {
     width: 100%;
-    margin-left: 0;
+    color: #eef0f8;
+  }
+  .prof_span {
+    display: none;
+  }
+  .prof_responsive {
+    margin-left: 5.5em;
     color: #eef0f8;
   }
   .biografia {
@@ -411,6 +425,11 @@ h6 {
 
 .enlaces:hover {
   color: #ff0000;
+  font-size: 1.1em;
+}
+
+.fa-brands {
+  margin-right: 0.6em;
 }
 
 .copy {
@@ -428,6 +447,12 @@ h6 {
   }
   .enlaces {
     margin: 0;
+  }
+  .text_resumido {
+    display: none;
+  }
+  .copy {
+    font-size: 0.7em;
   }
 }
 

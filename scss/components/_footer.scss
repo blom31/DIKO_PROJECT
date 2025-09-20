@@ -12,7 +12,12 @@
 }
 .enlaces:hover {
   color: utils.$color_hover;
+  font-size: 1.1em;
 }
+.fa-brands {
+  margin-right: 0.6em;
+}
+
 .copy {
   @include utils.enlaces(utils.$color_marca);
 }
@@ -27,5 +32,11 @@
   }
   .enlaces {
     margin: 0;
+  }
+  .text_resumido {
+    display: none;
+  }
+  .copy {
+    font-size: 0.7em;
   }
 }
