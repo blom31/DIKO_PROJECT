@@ -267,6 +267,9 @@ h6 {
     width: 100%;
     color: #eef0f8;
   }
+  .prof_responsive {
+    display: block;
+  }
   .prof_span {
     display: none;
   }
