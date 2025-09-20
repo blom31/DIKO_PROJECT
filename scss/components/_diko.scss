@@ -6,18 +6,19 @@
       rgba(12, 12, 12, 0.148),
       rgba(8, 8, 8, 0.583)
     ),
-    url(https://res.cloudinary.com/dv9yjyclh/image/upload/v1758240722/biografia_lqkyjx.jpg);
+    url(https://res.cloudinary.com/dv9yjyclh/image/upload/v1758394158/biografia_lqkyjx.jpg);
   background-size: cover;
   /* Ajusta la imagen para cubrir toda la pantalla */
   background-position: center;
   /* Centra la imagen */
   background-repeat: no-repeat;
   /* Evita que la imagen se repita */
-  min-height: 100dvh; // Altura real del viewport visible
 }
+
 .prof {
   color: utils.$color_fondo;
-  margin: 1em auto;
+  margin-top: 0.5em;
+  margin-left: 1.5em;
   // font-size: clamp(1rem, 2.5vw, 2rem); // Tamaño responsivo sin media queries
   font-size: 1.1em;
 }
@@ -26,20 +27,16 @@
 }
 .bio {
   width: clamp(280px, 30%, 600px); // Ancho flexible entre móviles y desktop
-  margin: 1em auto;
   font-size: clamp(0.95em, 1.5vw, 1.1em); // Tamaño de fuente responsivo
-  min-height: 100dvh; // Altura completa del viewport visible
   margin-left: auto;
   margin-right: 0;
 }
 .contacto-bloque {
   text-align: right;
-  margin-top: auto;
-  padding: 1em 2em;
+  padding: 1em;
   font-size: 1.1em;
   //  que quede pegado al footer visualmente:
-  position: relative;
-  top: 2dvh; // Ajusta según lo que veas en pantalla
+  top: 1em; // Ajusta según lo que veas en pantalla
 }
 .contacto {
   color: utils.$color_fondo;
@@ -47,56 +44,50 @@
   // Media query mínima para ajustar padding en móviles
 }
 @media (max-width: 768px) {
-  .bio {
-    width: 95vw;
-    margin: 1em auto;
-    font-size: 1em;
-    padding: 0.5em;
-    overflow-y: auto;
-    height: 5em;
-  }
   .prof {
+    width: 30%;
     margin-left: 0.5em;
     font-size: 1em;
     text-align: left;
   }
-  .contacto-bloque {
-    padding: 0.5em 1em;
-    font-size: 1em;
-    top: 0;
-  }
-  .fondo {
-    min-height: 60vh;
-    padding-bottom: 2em;
-  }
+
   .contacto {
     color: utils.$color_hover;
   }
 }
-@media (max-width: 360px) {
+@media screen and (width <= 600px) {
   .fondo {
     background-image: none;
     background-color: utils.$color_fondo;
   }
   .prof {
+    width: 100%;
+    margin-left: 0;
     color: utils.$color_marca;
+  }
+  .biografia {
+    @include utils.d_flex(flex, column, center, center, 1em);
+    width: 100%;
+    text-align: center;
   }
   .foto {
     display: block;
     @include utils.neo(#1c1a1a, 10px, 10px);
     width: 300px;
-    margin-left: 0.5em;
-    text-align: center;
+    margin: 0.7em;
   }
   .foto img {
     width: 95%;
     height: auto;
-    border-radius: 10px;
+    padding: 0.5em;
+    border-radius: 15px;
     object-fit: cover;
     opacity: 0.9;
+    text-align: center;
   }
   .bio {
-    margin-left: 0.5em;
+    margin: 0.5em;
+
     overflow-y: auto;
   }
 }
