@@ -200,6 +200,7 @@ h6 {
     font-size: 1em;
   }
 }
+/*Estilo de la biografia*/
 .fondo {
   background-image: linear-gradient(to right, rgba(12, 12, 12, 0.512), rgba(8, 8, 8, 0.355)), url(https://res.cloudinary.com/dv9yjyclh/image/upload/v1758394158/biografia_lqkyjx.jpg);
   background-size: cover;
@@ -247,6 +248,7 @@ h6 {
   color: #171515;
 }
 
+/* Tablets */
 @media (max-width: 768px) {
   .prof {
     width: 30%;
@@ -258,7 +260,7 @@ h6 {
     color: #999595;
   }
 }
-@media screen and (width <= 600px) {
+@media (max-width: 600px) {
   .fondo {
     background-image: none;
     background-color: #171515;
@@ -267,13 +269,11 @@ h6 {
     width: 100%;
     color: #eef0f8;
   }
-  .prof_responsive {
-    display: block;
-  }
   .prof_span {
     display: none;
   }
   .prof_responsive {
+    display: block;
     margin-left: 5.5em;
     color: #eef0f8;
   }
@@ -285,6 +285,7 @@ h6 {
     margin-top: 1em;
     width: 100%;
     text-align: center;
+    gap: 1em;
   }
   .foto {
     display: block;
@@ -292,10 +293,10 @@ h6 {
     border-radius: 10px;
     box-shadow: inset 10px 10px 20px #040404, inset -10px -10px 20px #222020;
     width: 95%;
-    margin: 0.7em;
+    margin: 0.7em auto;
   }
   .foto img {
-    width: 95%;
+    width: 100%;
     height: auto;
     padding: 0.5em;
     border-radius: 15px;
@@ -306,7 +307,6 @@ h6 {
   .bio {
     margin: 0.5em;
     width: 95%;
-    overflow-y: auto;
   }
   .contacto-bloque {
     display: flex;
@@ -370,14 +370,15 @@ h6 {
     overflow-y: auto;
   }
 }
-/*Estilo de la galería de Viajes*/
+/*Estilo de la galería de Venezuela*/
 .contenedor {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 0em;
   width: 97vw;
+  height: 82vh;
   margin: auto;
 }
 
@@ -385,33 +386,58 @@ h6 {
   background-color: #1c1a1a;
   border-radius: 7px;
   box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
-  width: 95%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  width: 100%;
+  height: 73%;
 }
 
 .gallery img {
-  width: 100%;
-  height: 200px;
+  width: 85%;
+  height: 325px;
   object-fit: cover;
   opacity: 1;
-  border-radius: 5px;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0.5em;
+  overflow: hidden;
 }
 
-@media (min-width: 1065px) {
+@media screen and (max-width: 768px) {
+  .contenedor {
+    height: auto;
+  }
   .gallery {
-    max-width: 1200px; /* Limita el ancho máximo */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Más columnas */
-    gap: 20px; /* Mayor separación en pantallas grandes */
+    flex-direction: column;
+    height: auto;
   }
 }
-@media screen and (width <= 600px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px; /* Menor separación en pantallas pequeñas */
-  }
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 1;
+  border-radius: 20px;
 }
+
+/*body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible 
+}
+
+footer {
+  margin-top: auto; /* se pega al fondo 
+}
+
+*/
 .redes {
   display: flex;
   flex-direction: row;

@@ -1,44 +1,64 @@
 @use "../utilities/utilities" as utils;
-/*Estilo de la galería de Viajes*/
+/*Estilo de la galería de Venezuela*/
 
 .contenedor {
-  @include utils.d_flex(flex, column, center, center, 0em);
+  @include utils.d_flex(flex, column, space-evenly, center, 0em);
   width: 97vw;
+  height: 82vh;
   margin: auto;
 }
 
 .gallery {
   @include utils.neo(#1c1a1a, 7px, 7px);
-  width: 95%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 18px;
+  @include utils.d_flex(flex, row, center, center, 0);
+  width: 100%;
+  height: 73%;
 }
 
 .gallery img {
-  @include utils.img(100%, 200px, cover, 1);
-  border-radius: 5px;
+  @include utils.img(85%, 325px, cover, 1);
+  align-items: center;
+  border-radius: 20px;
+  padding: 0.5em;
+  overflow: hidden;
 }
 // Media Queries para mejor adaptación
-@media (min-width: 1065px) {
-  .gallery {
-    max-width: 1200px; /* Limita el ancho máximo */
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(250px, 1fr)
-    ); /* Más columnas */
-    gap: 20px; /* Mayor separación en pantallas grandes */
-  }
-}
-@media screen and (width<=600px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px; /* Menor separación en pantallas pequeñas */
-  }
-}
-
-// @media (max-width: 480px) {
+// @media (min-width: 1065px) {
 //   .gallery {
-//     grid-template-columns: 1fr; // Una sola imagen por fila en móviles
+//     @include utils.neo(#1c1a1a, 7px, 7px);
+//     @include utils.d_flex(flex, row, center, center, 0);
+//     width: 100%;
+//     height: 73%;
 //   }
 // }
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    height: auto;
+  }
+  .gallery {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.gallery img {
+  @include utils.img(100%, auto, contain, 1);
+  border-radius: 20px;
+}
+
+//dato alternativo
+/*body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible 
+}
+
+footer {
+  margin-top: auto; /* se pega al fondo 
+}
+
+*/
