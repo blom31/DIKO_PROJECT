@@ -7,45 +7,82 @@
   height: 82vh;
   margin: auto;
 }
-
+.seccion {
+  @include utils.neo(#1c1a1a, 10px, 10px);
+  width: 140px;
+  height: 40px;
+  text-align: center;
+}
 .gallery {
-  @include utils.neo(#1c1a1a, 7px, 7px);
+  @include utils.neo(#1c1a1a, 10px, 10px);
   @include utils.d_flex(flex, row, center, center, 0);
+  width: 96%;
+  height: 70%;
+  flex-wrap: wrap;
+}
+.album {
+  position: relative;
+  flex: 1 1 30%; // cada imagen ocupa ~30% del ancho, se ajusta sola
+  max-width: 32%;
+  height: 90%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 1%;
+}
+.album img {
   width: 100%;
-  height: 73%;
+  height: 100%;
+  object-fit: cover; // mantiene proporción pero llena el espacio
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-.gallery img {
-  @include utils.img(85%, 325px, cover, 1);
-  align-items: center;
-  border-radius: 20px;
-  padding: 0.5em;
-  overflow: hidden;
+.album:hover img {
+  transform: scale(1.15);
+  filter: brightness(60%);
 }
-// Media Queries para mejor adaptación
-// @media (min-width: 1065px) {
-//   .gallery {
-//     @include utils.neo(#1c1a1a, 7px, 7px);
-//     @include utils.d_flex(flex, row, center, center, 0);
-//     width: 100%;
-//     height: 73%;
-//   }
-// }
+.album .titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Big Shoulders Stencil", sans-serif;
+  font-size: clamp(1.2em, 2vw, 2em);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.album:hover .titulo {
+  opacity: 1;
+}
+
+//Media Queries para mejor adaptación
+@media (min-width: 1065px) {
+  .gallery {
+    @include utils.neo(#1c1a1a, 7px, 7px);
+    @include utils.d_flex(flex, row, center, center, 0);
+    width: 100%;
+    height: 73%;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .contenedor {
-    height: auto;
+    height: 90vh;
   }
   .gallery {
-    flex-direction: column;
     height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0.2em;
+  }
+  .album {
+    flex: 1 1 90%; // ocupar todo el ancho
+    max-width: 92%;
+    height: auto; // que se adapte al contenido
+    margin: 10px;
   }
 }
-.gallery img {
-  @include utils.img(100%, auto, contain, 1);
-  border-radius: 20px;
-}
-
 //dato alternativo
 /*body {
   min-height: 100vh;

@@ -18,6 +18,7 @@
 
 .copy {
   @include utils.enlaces(utils.$color_marca);
+  font-size: 0.8em;
 }
 .developer {
   color: utils.$color_marca;
