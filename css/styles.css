@@ -413,18 +413,20 @@ h6 {
   border-radius: 20px;
   overflow: hidden;
   margin: 1%;
+  transition: flex-grow 0.5s ease;
 }
 
 .album img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .album:hover img {
-  transform: scale(1.15);
-  filter: brightness(60%);
+  opacity: 1;
+  filter: contrast(120%);
+  transform: scale(1.1);
 }
 
 .album .titulo {
@@ -441,6 +443,36 @@ h6 {
 
 .album:hover .titulo {
   opacity: 1;
+  color: #d0caca;
+}
+
+/* albums individuales */
+.album-content {
+  display: none; /* inicialmente oculto */
+  padding: 2em;
+  background-color: #1c1a1a;
+  border-radius: 15px;
+  box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
+  text-align: center;
+}
+
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.album-grid img {
+  width: 30%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.close-album {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  cursor: pointer;
 }
 
 @media (min-width: 1065px) {
