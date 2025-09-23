@@ -31,9 +31,7 @@
   transition: flex-grow 0.5s ease;
 }
 .album img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; // mantiene proporción pero llena el espacio
+  @include utils.img(100%, 100%, cover, 0.5);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 //
@@ -42,25 +40,29 @@
   filter: contrast(120%);
   transform: scale(1.1);
 }
-.album .titulo {
+.titulo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "Big Shoulders Stencil", sans-serif;
-  font-size: clamp(1.2em, 2vw, 2em);
-  color: #fff;
   opacity: 0;
+  color: #fff;
+  font-size: 2em;
   transition: opacity 0.3s ease-in-out;
 }
 
 .album:hover .titulo {
   opacity: 1;
   color: #d0caca;
+  cursor: pointer;
 }
 
 /* albums individuales */
-
+.albums {
+  @include utils.d_flex(flex, column, space-evenly, center, 0em);
+  width: 90vw;
+  margin: auto;
+}
 .album-content {
   display: none; /* inicialmente oculto */
   padding: 2em;
@@ -68,25 +70,33 @@
   border-radius: 15px;
   box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
   text-align: center;
+  margin-top: 1em;
 }
 
 .album-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1em;
-  justify-content: center;
 }
-
-.album-grid img {
-  width: 30%;
+.album-grid a {
+  display: block;
+}
+.album-grid-img {
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
 
 .close-album {
+  @include utils.neo(#1c1a1a, 7px, 7px);
+  color: utils.$color_cerrar;
   margin-top: 1em;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   cursor: pointer;
+  font-size: 1em;
+  font-weight: bolder;
+  letter-spacing: 0.3em;
 }
 
 //Media Queries para mejor adaptación
@@ -101,7 +111,7 @@
 
 @media screen and (max-width: 768px) {
   .contenedor {
-    height: 90vh;
+    height: auto;
   }
   .gallery {
     height: auto;
@@ -115,7 +125,21 @@
     height: auto; // que se adapte al contenido
     margin: 10px;
   }
+  .close-album {
+    font-size: 0.8em;
+    padding: 0.3em;
+    letter-spacing: 0.2em;
+  }
+  // .album-grid {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
 }
+@media (max-width: 480px) {
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 //dato alternativo
 /*body {
   min-height: 100vh;

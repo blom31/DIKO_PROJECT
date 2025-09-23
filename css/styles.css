@@ -181,7 +181,6 @@ h6 {
 
 .item:hover .titulo {
   opacity: 1;
-  /* Muestra el texto */
   color: #d0caca;
 }
 
@@ -420,6 +419,7 @@ h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.5;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -429,24 +429,34 @@ h6 {
   transform: scale(1.1);
 }
 
-.album .titulo {
+.titulo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "Big Shoulders Stencil", sans-serif;
-  font-size: clamp(1.2em, 2vw, 2em);
-  color: #fff;
   opacity: 0;
+  color: #fff;
+  font-size: 2em;
   transition: opacity 0.3s ease-in-out;
 }
 
 .album:hover .titulo {
   opacity: 1;
   color: #d0caca;
+  cursor: pointer;
 }
 
 /* albums individuales */
+.albums {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0em;
+  width: 90vw;
+  margin: auto;
+}
+
 .album-content {
   display: none; /* inicialmente oculto */
   padding: 2em;
@@ -454,25 +464,37 @@ h6 {
   border-radius: 15px;
   box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
   text-align: center;
+  margin-top: 1em;
 }
 
 .album-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1em;
-  justify-content: center;
 }
 
-.album-grid img {
-  width: 30%;
+.album-grid a {
+  display: block;
+}
+
+.album-grid-img {
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
 
 .close-album {
+  background-color: #1c1a1a;
+  border-radius: 7px;
+  box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
+  color: #ff0000;
   margin-top: 1em;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   cursor: pointer;
+  font-size: 1em;
+  font-weight: bolder;
+  letter-spacing: 0.3em;
 }
 
 @media (min-width: 1065px) {
@@ -491,7 +513,7 @@ h6 {
 }
 @media screen and (max-width: 768px) {
   .contenedor {
-    height: 90vh;
+    height: auto;
   }
   .gallery {
     height: auto;
@@ -504,6 +526,16 @@ h6 {
     max-width: 92%;
     height: auto;
     margin: 10px;
+  }
+  .close-album {
+    font-size: 0.8em;
+    padding: 0.3em;
+    letter-spacing: 0.2em;
+  }
+}
+@media (max-width: 480px) {
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 /*body {
