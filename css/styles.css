@@ -123,6 +123,16 @@ h6 {
     width: auto;
   }
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible */
+}
+
 .mosaico {
   display: flex;
   flex-direction: row;
@@ -208,6 +218,13 @@ h6 {
   /* Centra la imagen */
   background-repeat: no-repeat;
   /* Evita que la imagen se repita */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible */
 }
 
 .prof {
@@ -553,6 +570,10 @@ footer {
 }
 
 */
+footer {
+  margin-top: auto; /* se pega al fondo */
+}
+
 .redes {
   display: flex;
   flex-direction: row;

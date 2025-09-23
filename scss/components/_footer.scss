@@ -1,5 +1,8 @@
 @use "../utilities/utilities" as utils;
 
+footer {
+  margin-top: auto; /* se pega al fondo */
+}
 .redes {
   @include utils.d_flex(flex, row, space-between, center, 0);
   color: utils.$color_marca;

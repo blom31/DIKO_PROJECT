@@ -1,4 +1,13 @@
 @use "../utilities/utilities" as utils;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible */
+}
 
 .mosaico {
   @include utils.d_flex(flex, row, center, center, 0.5em);

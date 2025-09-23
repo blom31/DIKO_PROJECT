@@ -13,8 +13,13 @@
   /* Centra la imagen */
   background-repeat: no-repeat;
   /* Evita que la imagen se repita */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
+main {
+  flex: 1; /* ocupa todo el espacio disponible */
+}
 .prof {
   color: utils.$color_fondo;
   margin-top: 0.5em;
