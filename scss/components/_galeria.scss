@@ -72,7 +72,14 @@
   text-align: center;
   margin-top: 1em;
 }
-
+.album-conten {
+  padding: 2em;
+  background-color: #1c1a1a;
+  border-radius: 15px;
+  box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
+  text-align: center;
+  margin-top: 1em;
+}
 .album-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
