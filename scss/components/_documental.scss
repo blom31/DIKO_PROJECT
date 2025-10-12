@@ -9,7 +9,6 @@
   @include utils.d_flex(flex, row, space-between, center, 0);
   @include utils.neo(#1c1a1a, 7px, 7px);
   width: 90vw;
-  // min-height: 60vh;
   margin-top: 1em;
 }
 
@@ -37,17 +36,33 @@
 @media screen and (max-width: 768px) {
   .documental {
     flex-direction: column;
-    width: 100vw;
+    width: 99vw;
     min-height: auto;
   }
   .video,
   iframe {
-    width: 100%;
+    width: 95%;
   }
 
   .descripcion {
     width: 98%;
     height: 15em;
     overflow-y: auto;
+  } 
+}
+@media screen and (max-width: 425px){
+  .documental {
+    width: 90vw;
+  }
+  .video,
+  iframe {
+    width: 90%;
+  }
+
+  .descripcion {
+    width: 90%;
+  }
+  .oculto {
+    display: none;
   }
 }

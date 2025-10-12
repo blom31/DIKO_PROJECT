@@ -390,17 +390,32 @@ main {
 @media screen and (max-width: 768px) {
   .documental {
     flex-direction: column;
-    width: 100vw;
+    width: 99vw;
     min-height: auto;
   }
   .video,
   iframe {
-    width: 100%;
+    width: 95%;
   }
   .descripcion {
     width: 98%;
     height: 15em;
     overflow-y: auto;
+  }
+}
+@media screen and (max-width: 425px) {
+  .documental {
+    width: 90vw;
+  }
+  .video,
+  iframe {
+    width: 90%;
+  }
+  .descripcion {
+    width: 90%;
+  }
+  .oculto {
+    display: none;
   }
 }
 /*Estilo de la galería de Venezuela*/
