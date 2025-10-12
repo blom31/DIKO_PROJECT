@@ -369,7 +369,6 @@ main {
 
 .video {
   width: 50vw;
-  height: 90%;
   margin-left: 2em;
   text-align: center;
   margin-top: 1em;
@@ -412,7 +411,8 @@ main {
     width: 90%;
   }
   .descripcion {
-    width: 90%;
+    width: 100%;
+    height: inherit;
   }
   .oculto {
     display: none;
