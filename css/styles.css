@@ -251,13 +251,15 @@ main {
   font-size: clamp(0.95em, 1.5vw, 1.1em);
   margin-left: auto;
   margin-right: 0;
+  margin-top: 1.5em;
 }
 
 .contacto-bloque {
   text-align: right;
   padding: 1em;
   font-size: 1.1em;
-  top: 1em;
+  margin-top: 2em;
+  top: em;
 }
 
 .contacto {
@@ -405,6 +407,7 @@ main {
   width: 140px;
   height: 40px;
   text-align: center;
+  margin-top: 1em;
 }
 
 .gallery {
@@ -472,11 +475,12 @@ main {
   margin-top: 0em;
   width: 90vw;
   margin: auto;
+  padding-top: 1em;
 }
 
 .album-content {
   display: none; /* inicialmente oculto */
-  padding: 2em;
+  padding: 1em;
   background-color: #1c1a1a;
   border-radius: 15px;
   box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
@@ -605,6 +609,14 @@ footer {
 .developer {
   color: #eef0f8;
   font-weight: 100;
+}
+
+small a {
+  color: #ff0000;
+  font-weight: 100;
+  margin-top: 0.3em;
+  display: block;
+  text-align: center;
 }
 
 @media screen and (width <= 600px) {

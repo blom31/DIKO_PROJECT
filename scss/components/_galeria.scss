@@ -12,6 +12,7 @@
   width: 140px;
   height: 40px;
   text-align: center;
+  margin-top: 1em
 }
 .gallery {
   @include utils.neo(#1c1a1a, 10px, 10px);
@@ -62,18 +63,11 @@
   @include utils.d_flex(flex, column, space-evenly, center, 0em);
   width: 90vw;
   margin: auto;
+  padding-top: 1em;
 }
 .album-content {
   display: none; /* inicialmente oculto */
-  padding: 2em;
-  background-color: #1c1a1a;
-  border-radius: 15px;
-  box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
-  text-align: center;
-  margin-top: 1em;
-}
-.album-conten {
-  padding: 2em;
+  padding: 1em;
   background-color: #1c1a1a;
   border-radius: 15px;
   box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;

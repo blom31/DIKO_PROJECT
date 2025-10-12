@@ -27,7 +27,13 @@ footer {
   color: utils.$color_marca;
   font-weight: 100;
 }
-
+small a{
+  color: utils.$color_hover;
+  font-weight: 100;
+  margin-top: 0.3em;
+  display: block;
+  text-align: center;
+}
 @media screen and (width <= 600px) {
   .redes {
     gap: 1em;
