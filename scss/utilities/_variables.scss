@@ -5,7 +5,7 @@ $color_fondo: #171515;
 $color_marca: #eef0f8;
 $color_cerrar: #ff0000;
 $color_hover: #ff0000;
-$color_contacto: #999595;
+$color_contacto: #aba8a8;
 $color_texto_sec: #636363;
 
 // Definir un mapa con estilos para cada encabezado
@@ -20,7 +20,7 @@ $heading-map: (
   ),
   h3: (
     24px,
-    #c49029,
+    $color_contacto
   ),
   h4: (
     20px,

@@ -1,23 +1,32 @@
 @use "../utilities/utilities" as utils;
 /*Sección Documental*/
+.contenedor_docu{
+  @include utils.d_flex(flex, column, center, center, 0);
+  // min-height: 80vh;
+  margin-top: 1em;
+}
 .documental {
   @include utils.d_flex(flex, row, space-between, center, 0);
   @include utils.neo(#1c1a1a, 7px, 7px);
-  width: 98vw;
-  min-height: 67vh;
+  width: 90vw;
+  // min-height: 60vh;
+  margin-top: 1em;
 }
 
 .video {
-  width: 50%;
-  padding: 1em;
+  width: 50vw;
+  height: 90%;
+  margin-left: 2em;
+  text-align: center;
+  margin-top: 1em;
 
   iframe {
-    width: 100%;
+    width: 90%;
     aspect-ratio: 16 / 9; /* Hace el video responsivo */
   }
 }
 .descripcion {
-  width: 55%;
+  width: 50vw;
   height: 95%;
   padding: 1em;
   overflow-y: auto;
