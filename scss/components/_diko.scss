@@ -42,11 +42,48 @@ main {
   margin-right: 0;
   margin-top: 1.5em;
 }
+.creditos-contacto {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .creditos-trabajo {
+    flex: 1;
+    min-width: 250px;
+    margin-left: 1.5em;
+
+    h4 {
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      margin-bottom: 0.5em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.5em;
+
+        a {
+          color: utils.$color_marca;
+          text-decoration: none;
+          font-weight: 500;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+
+}
 .contacto-bloque {
   text-align: right;
   padding: 1em;
   font-size: 1.1em;
-margin-top: 2em;
+  margin-top: 2em;
   //  que quede pegado al footer visualmente:
   top: em; // Ajusta según lo que veas en pantalla
 }
@@ -109,7 +146,9 @@ margin-top: 2em;
   .bio {
     margin: 0.5em;
     width: 95%;
-    // overflow-y: auto;
+  }
+  .text_oculto {
+    display: none;
   }
   .contacto-bloque {
     @include utils.d_flex(flex, row, center, center, 0.5em);

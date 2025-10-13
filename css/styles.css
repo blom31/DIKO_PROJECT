@@ -62,7 +62,7 @@ h3 {
 
 h4 {
   font-size: 20px;
-  color: #999;
+  color: #171515;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -257,6 +257,36 @@ main {
   margin-top: 1.5em;
 }
 
+.creditos-contacto {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.creditos-contacto .creditos-trabajo {
+  flex: 1;
+  min-width: 250px;
+  margin-left: 1.5em;
+}
+.creditos-contacto .creditos-trabajo h4 {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  margin-bottom: 0.5em;
+}
+.creditos-contacto .creditos-trabajo ul {
+  list-style: none;
+  padding: 0;
+}
+.creditos-contacto .creditos-trabajo ul li {
+  margin-bottom: 0.5em;
+}
+.creditos-contacto .creditos-trabajo ul li a {
+  color: #eef0f8;
+  text-decoration: none;
+  font-weight: 500;
+}
+.creditos-contacto .creditos-trabajo ul li a:hover {
+  text-decoration: underline;
+}
+
 .contacto-bloque {
   text-align: right;
   padding: 1em;
@@ -329,6 +359,9 @@ main {
     margin: 0.5em;
     width: 95%;
   }
+  .text_oculto {
+    display: none;
+  }
   .contacto-bloque {
     display: flex;
     flex-direction: row;
@@ -363,26 +396,26 @@ main {
   background-color: #1c1a1a;
   border-radius: 7px;
   box-shadow: inset 7px 7px 14px #040404, inset -7px -7px 14px #222020;
-  width: 90vw;
+  width: 80vw;
   margin-top: 1em;
 }
 
 .video {
-  width: 50vw;
+  width: 40vw;
   margin-left: 2em;
   text-align: center;
-  margin-top: 1em;
+  margin: 1em;
 }
 .video iframe {
-  width: 90%;
+  width: 70%;
   aspect-ratio: 16/9; /* Hace el video responsivo */
 }
 
 .descripcion {
   width: 50vw;
+  margin-left: 2em;
   height: 95%;
   padding: 1em;
-  overflow-y: auto;
 }
 
 /*responsividad*/
@@ -408,13 +441,14 @@ main {
   }
   .video,
   iframe {
-    width: 90%;
+    width: 100%;
   }
   .descripcion {
     width: 100%;
     height: inherit;
+    align-items: center;
   }
-  .oculto {
+  h3, .oculto {
     display: none;
   }
 }
@@ -639,14 +673,6 @@ footer {
 .developer {
   color: #eef0f8;
   font-weight: 100;
-}
-
-small a {
-  color: #ff0000;
-  font-weight: 100;
-  margin-top: 0.3em;
-  display: block;
-  text-align: center;
 }
 
 @media screen and (width <= 600px) {
