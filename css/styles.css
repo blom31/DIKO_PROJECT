@@ -295,7 +295,7 @@ main {
   top: em;
 }
 
-.contacto {
+.contacto, .nombre {
   color: #171515;
 }
 
@@ -307,7 +307,7 @@ main {
     font-size: 1em;
     text-align: left;
   }
-  .contacto {
+  .contacto, .nombre {
     color: #aba8a8;
   }
 }
@@ -372,6 +372,9 @@ main {
     padding: 0;
     font-size: 1em;
     margin-bottom: 1em;
+  }
+  h4 {
+    color: #aba8a8;
   }
   .contacto {
     padding: 0 0.8em;
