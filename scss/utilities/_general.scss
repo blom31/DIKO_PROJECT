@@ -21,10 +21,12 @@ body {
   background-color: v.$color_fondo;
 }
 a {
+  color: v.$color_marca;
   text-decoration: none;
 }
 li {
   list-style: none;
+  margin-bottom: 0.5em;
 }
 p {
   color: v.$color_marca;

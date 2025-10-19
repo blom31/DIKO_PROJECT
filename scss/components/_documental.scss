@@ -1,6 +1,6 @@
 @use "../utilities/utilities" as utils;
 /*Sección Documental*/
-.contenedor_docu{
+.contenedor_docu {
   @include utils.d_flex(flex, column, center, center, 0);
   // min-height: 80vh;
   margin-top: 1em;
@@ -29,6 +29,23 @@
   height: 95%;
   padding: 1em;
 }
+.colaboraciones{
+  width: 30vw;
+  margin-left: 2em;
+  height: 95%;
+  padding: 1em;
+}
+.creditos-trabajo {
+  @include utils.d_flex(flex, row, flex-start, center, 0);
+  margin-left: 1.5em;
+    width: 60vw;
+}
+.col1, .col2{
+  width: 60%;
+  margin: 10px;
+}
+
+
 
 
 /*responsividad*/
@@ -48,9 +65,9 @@
     width: 98%;
     height: 15em;
     overflow-y: auto;
-  } 
+  }
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
   .documental {
     width: 90vw;
   }
@@ -64,7 +81,8 @@
     height: inherit;
     align-items: center;
   }
-h3, .oculto {
+  h3,
+  .oculto {
     display: none;
   }
 }
