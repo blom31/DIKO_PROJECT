@@ -211,7 +211,7 @@ h6 {
   }
   .item img {
     width: 100%;
-    height: auto; /* mantiene la proporción de la imagen */
+    height: 46.5vh; /* mantiene la proporción de la imagen */
     object-fit: cover; /* cambiar a 'contain' si no quieres recortes */
     display: block;
     transition: none; /* desactivar transiciones pesadas en móvil */
