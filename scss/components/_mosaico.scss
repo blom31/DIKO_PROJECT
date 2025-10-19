@@ -49,22 +49,43 @@
   opacity: 1;
   color: #d0caca;
 }
-@media screen and (width<=600px) {
+// ...existing code...
+@media screen and (max-width: 600px) {
   .mosaico {
     flex-direction: column;
-    height: 100vh;
+    height: auto; /* dejar que el contenido determine la altura */
     margin-top: 1em;
+    gap: 0.5em;
+  }
+
+  .item {
+    height: auto;
+    flex: none; /* evitar que crezcan con flex en column layout */
+    width: 100%;
+    overflow: visible;
   }
 
   .item img {
-    height: 100%;
+    width: 100%;
+    height: auto; /* mantiene la proporción de la imagen */
+    object-fit: cover; /* cambiar a 'contain' si no quieres recortes */
+    display: block;
+    transition: none; /* desactivar transiciones pesadas en móvil */
   }
 
-  .item:hover img {
-    transform: scale(1.2);
+  /* desactivar el escalado por hover en dispositivos táctiles */
+  .item:hover img,
+  .item:active img {
+    transform: none;
   }
 
   .titulo {
     font-size: 1em;
+    position: relative; /* poner el título debajo o encima sin superponer centralmente */
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 0.5em;
   }
 }
+// ...existing code...
