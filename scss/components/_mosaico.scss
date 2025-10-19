@@ -49,20 +49,18 @@
   opacity: 1;
   color: #d0caca;
 }
-// ...existing code...
 @media screen and (max-width: 600px) {
   .mosaico {
     flex-direction: column;
     height: auto; /* dejar que el contenido determine la altura */
     margin-top: 1em;
-    gap: 0.5em;
+    margin: 0.2em;
   }
 
   .item {
     height: auto;
     flex: none; /* evitar que crezcan con flex en column layout */
-    width: 100%;
-    overflow: visible;
+  
   }
 
   .item img {

@@ -201,13 +201,11 @@ h6 {
     flex-direction: column;
     height: auto; /* dejar que el contenido determine la altura */
     margin-top: 1em;
-    gap: 0.5em;
+    margin: 0.2em;
   }
   .item {
     height: auto;
     flex: none; /* evitar que crezcan con flex en column layout */
-    width: 100%;
-    overflow: visible;
   }
   .item img {
     width: 100%;
