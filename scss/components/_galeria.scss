@@ -4,7 +4,7 @@
 .contenedor {
   @include utils.d_flex(flex, column, space-evenly, center, 0em);
   width: 97vw;
-  height: 82vh;
+  height: 79vh;
   margin: auto;
 }
 .seccion {

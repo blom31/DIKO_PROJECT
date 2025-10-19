@@ -1,11 +1,9 @@
 @use "../utilities/utilities" as utils;
 
-
-
 .mosaico {
   @include utils.d_flex(flex, row, center, center, 0.5em);
   width: 98vw;
-  height: 79vh;
+  height: 81vh;
   overflow: hidden;
 }
 .item {
