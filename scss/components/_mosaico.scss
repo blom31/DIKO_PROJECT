@@ -67,7 +67,7 @@
 
   .item img {
     width: 100%;
-    height: 46.5vh; /* mantiene la proporción de la imagen */
+    height: 45vh; /* mantiene la proporción de la imagen */
     object-fit: cover; /* cambiar a 'contain' si no quieres recortes */
     display: block;
     transition: none; /* desactivar transiciones pesadas en móvil */
