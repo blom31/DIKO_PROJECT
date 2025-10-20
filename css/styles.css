@@ -430,7 +430,8 @@ main {
   width: 60vw;
 }
 
-.col1, .col2 {
+.col1,
+.col2 {
   width: 60%;
   margin: 10px;
 }
@@ -468,6 +469,19 @@ main {
   h3,
   .oculto {
     display: none;
+  }
+  .colaboraciones {
+    width: 98%;
+    margin: 0;
+  }
+  .creditos-trabajo {
+    flex-direction: column;
+    width: 98vw;
+    margin-bottom: 10px;
+  }
+  .col1,
+  .col2 {
+    margin: 0;
   }
 }
 /*Estilo de la galería de Venezuela*/
