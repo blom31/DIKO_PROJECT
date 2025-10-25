@@ -664,6 +664,9 @@ main {
   .album-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .gallery {
+    margin-top: 1em;
+  }
 }
 /*body {
   min-height: 100vh;
