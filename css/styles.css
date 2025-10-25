@@ -140,6 +140,9 @@ h6 {
     font-size: 0.8em;
     width: auto;
   }
+  .cerrar {
+    font-size: 0.8em;
+  }
 }
 .mosaico {
   display: flex;
