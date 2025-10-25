@@ -1,7 +1,7 @@
 @use "../utilities/utilities" as utils;
 
 footer {
-  margin-top: auto; /* se pega al fondo */
+  margin-top: 0.8em; /* se pega al fondo */
 }
 .redes {
   @include utils.d_flex(flex, row, space-between, center, 0);

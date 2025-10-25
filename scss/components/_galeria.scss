@@ -4,7 +4,7 @@
 .contenedor {
   @include utils.d_flex(flex, column, space-evenly, center, 0em);
   width: 97vw;
-  height: 79vh;
+  height: 80vh;
   margin: auto;
 }
 .seccion {
@@ -31,7 +31,7 @@
   position: relative;
   flex: 1 1 30%; // cada imagen ocupa ~30% del ancho, se ajusta sola
   max-width: 95%;
-  height: 95%;
+  height: 93%;
   border-radius: 10px;
   overflow: hidden;
   margin: 1%;
@@ -45,7 +45,7 @@
 .album:hover img {
   opacity: 1;
   filter: contrast(120%);
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 .titulo {
   position: absolute;
