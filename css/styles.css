@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Big Shoulders Stencil", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html,
@@ -37,12 +37,11 @@ li {
 
 p {
   color: #eef0f8;
-  letter-spacing: 0.2em;
-  line-height: 1.6;
+  line-height: 2;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.9em;
   color: #eef0f8;
   font-weight: bold;
   margin-bottom: 10px;
@@ -95,6 +94,7 @@ h6 {
 }
 
 .marca {
+  font-family: "big shoulders stencil", sans-serif;
   color: #eef0f8;
   width: 210px;
   padding: 0.1em;
@@ -106,6 +106,7 @@ h6 {
 }
 
 .cerrar {
+  font-family: "big shoulders stencil", sans-serif;
   color: #ff0000;
   text-align: center;
 }
@@ -141,7 +142,7 @@ h6 {
     width: auto;
   }
   .cerrar {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 }
 .mosaico {
@@ -151,7 +152,7 @@ h6 {
   align-items: center;
   margin-top: 0.5em;
   width: 98vw;
-  height: 81vh;
+  height: 79vh;
   overflow: hidden;
 }
 
@@ -208,33 +209,37 @@ h6 {
 @media screen and (max-width: 600px) {
   .mosaico {
     flex-direction: column;
+    align-items: center;
     height: auto; /* dejar que el contenido determine la altura */
-    margin-top: 1em;
-    margin: 0.2em;
+    margin-top: 1.5em;
+    padding-left: 0.5em;
   }
   .item {
     height: auto;
-    flex: none; /* evitar que crezcan con flex en column layout */
+    flex: none;
+    position: relative;
   }
   .item img {
     width: 100%;
-    height: 45vh; /* mantiene la proporción de la imagen */
-    object-fit: cover; /* cambiar a 'contain' si no quieres recortes */
+    height: 45vh;
+    object-fit: cover;
     display: block;
-    transition: none; /* desactivar transiciones pesadas en móvil */
+    filter: none;
   }
-  /* desactivar el escalado por hover en dispositivos táctiles */
-  .item:hover img,
-  .item:active img {
-    transform: none;
-  }
-  .titulo {
-    font-size: 1em;
-    position: relative; /* poner el título debajo o encima sin superponer centralmente */
-    top: auto;
-    left: auto;
-    transform: none;
-    margin-top: 0.5em;
+  .item .titulo {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    font-size: 1.2em;
+    color: #eef0f8;
+    background-color: rgba(26, 25, 25, 0.6);
+    padding: 0.5em 0.5em;
+    border-radius: 8px;
+    text-shadow: none;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
   }
 }
 /*Estilo de la biografia*/
@@ -500,11 +505,6 @@ main {
 }
 
 .seccion {
-  background-color: #1c1a1a;
-  border-radius: 10px;
-  box-shadow: inset 10px 10px 20px #040404, inset -10px -10px 20px #222020;
-  width: 140px;
-  height: 40px;
   text-align: center;
   margin-top: 1em;
 }
@@ -664,6 +664,10 @@ main {
   }
 }
 @media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
   .album-grid {
     grid-template-columns: repeat(2, 1fr);
   }

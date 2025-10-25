@@ -8,9 +8,6 @@
   margin: auto;
 }
 .seccion {
-  @include utils.neo(#1c1a1a, 10px, 10px);
-  width: 140px;
-  height: 40px;
   text-align: center;
   margin-top: 1em
 }
@@ -142,13 +139,18 @@
   // }
 }
 @media (max-width: 480px) {
+  h1{
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+
   .album-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .gallery{
     margin-top: 1em;
   }
-}
+} 
 
 //dato alternativo
 /*body {

@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Big Shoulders Stencil", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    ;
   }
  html,
   body {
@@ -30,8 +31,8 @@ li {
 }
 p {
   color: v.$color_marca;
-  letter-spacing: 0.2em;
-  line-height: 1.6;
+  // letter-spacing: 0.2em;
+  line-height: 2;
 }
 
 // Aplicar el mixin a cada encabezado
@@ -53,3 +54,4 @@ h5 {
 h6 {
   @include v.headingStyles(h6);
 }
+ 
