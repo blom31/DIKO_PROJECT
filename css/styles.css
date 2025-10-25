@@ -555,7 +555,7 @@ main {
 .album:hover img {
   opacity: 1;
   filter: contrast(120%);
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .titulo {
