@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  font-weight: 200;
 }
 
 html,
@@ -41,21 +42,21 @@ p {
 }
 
 h1 {
-  font-size: 1.9em;
+  font-size: 1.8em;
   color: #eef0f8;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 1.5em;
   color: #636363;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 1.3em;
   color: #aba8a8;
   font-weight: bold;
   margin-bottom: 10px;
@@ -95,6 +96,7 @@ h6 {
 
 .marca {
   font-family: "big shoulders stencil", sans-serif;
+  font-weight: 400;
   color: #eef0f8;
   width: 210px;
   padding: 0.1em;
@@ -107,6 +109,7 @@ h6 {
 
 .cerrar {
   font-family: "big shoulders stencil", sans-serif;
+  font-weight: 400;
   color: #ff0000;
   text-align: center;
 }
@@ -170,7 +173,7 @@ h6 {
   height: 100%;
   object-fit: cover;
   opacity: 0.5;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 1s ease, transform 0.5s ease;
 }
 
 .titulo {
@@ -179,12 +182,12 @@ h6 {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  color: #f8eeee;
-  font-size: 2em;
+  color: #eef0f8;
+  font-size: 1.8em;
   text-align: center;
   transition: opacity 0.5s ease-in-out;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.5em 1em;
+  padding: 0.5em 0.5em;
   border-radius: 10px;
   text-decoration: none;
 }
@@ -197,7 +200,7 @@ h6 {
 
 .item:hover img {
   opacity: 1;
-  filter: contrast(120%);
+  filter: contrast(100%);
   transform: scale(1.1);
 }
 
@@ -240,6 +243,10 @@ h6 {
     text-shadow: none;
     font-weight: 400;
     transition: background-color 0.3s ease;
+  }
+  .item:hover img {
+    filter: contrast(100%);
+    transform: scale(1.1);
   }
 }
 /*Estilo de la biografia*/
@@ -558,18 +565,23 @@ main {
   transform: scale(1.2);
 }
 
-.titulo {
+.gallery-titulo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  color: #fff;
-  font-size: 2em;
-  transition: opacity 0.3s ease-in-out;
+  color: #eef0f8;
+  font-size: 1.8em;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 0.5em;
+  border-radius: 10px;
+  text-decoration: none;
 }
 
-.album:hover .titulo {
+.album:hover .gallery-titulo {
   opacity: 1;
   color: #d0caca;
   cursor: pointer;

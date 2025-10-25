@@ -11,15 +11,16 @@ $color_texto_sec: #636363;
 // Definir un mapa con estilos para cada encabezado
 $heading-map: (
   h1: (
-    1.9em,
+    1.8em,
     $color_marca,
+
   ),
   h2: (
-    30px,
+    1.5em,
     $color_texto_sec,
   ),
   h3: (
-    24px,
+    1.3em,
     $color_contacto
   ),
   h4: (

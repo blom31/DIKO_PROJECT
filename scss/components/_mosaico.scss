@@ -16,7 +16,7 @@
 }
 .item img {
   @include utils.img(100%, 100%, cover, 0.5);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 1s ease, transform 0.5s ease;
 }
 .titulo {
   position: absolute;
@@ -24,15 +24,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  color: #f8eeee;
-  font-size: 2em;
+  color: utils.$color_marca;
+  font-size: 1.8em;
   text-align: center;
   transition: opacity 0.5s ease-in-out;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.5em 1em;
+  padding: 0.5em 0.5em;
   border-radius: 10px;
   text-decoration: none;
-}
+} 
 /* Efectos al pasar el mouse */
 .item:hover {
   flex-grow: 2;
@@ -40,7 +40,7 @@
 }
 .item:hover img {
   opacity: 1;
-  filter: contrast(120%);
+  filter: contrast(100%);
   transform: scale(1.1);
 }
 .item:hover .titulo {
@@ -86,5 +86,9 @@
       transition: background-color 0.3s ease;
     }
   }
+  .item:hover img {
+  filter: contrast(100%);
+  transform: scale(1.1);
+}
 
 }
