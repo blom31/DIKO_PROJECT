@@ -15,7 +15,7 @@
   @include utils.neo(#1c1a1a, 10px, 10px);
   @include utils.d_flex(flex, row, center, center, 0);
   width: 96%;
-  height: 70%;
+  height: 100%;
   flex-wrap: wrap;
 }
 .contenedor-gallery{
@@ -28,7 +28,7 @@
   position: relative;
   flex: 1 1 30%; // cada imagen ocupa ~30% del ancho, se ajusta sola
   max-width: 95%;
-  height: 93%;
+  height: 90%;
   border-radius: 10px;
   overflow: hidden;
   margin: 1%;
@@ -42,7 +42,7 @@
 .album:hover img {
   opacity: 1;
   filter: contrast(120%);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .gallery-titulo {
   position: absolute;
@@ -99,13 +99,13 @@
 
 .close-album {
   @include utils.neo(#1c1a1a, 7px, 7px);
-  color: utils.$color_cerrar;
-  margin-top: 1em;
+  color: utils.$color_marca;
+  margin-top: 1.8em;
   padding: 0.5em;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 0.7em;
   font-weight: bolder;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.1em;
 }
 
 //Media Queries para mejor adaptación

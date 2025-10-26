@@ -38,6 +38,7 @@ p {
 // Aplicar el mixin a cada encabezado
 h1 {
   @include v.headingStyles(h1);
+  font-weight: 400
 }
 h2 {
   @include v.headingStyles(h2);

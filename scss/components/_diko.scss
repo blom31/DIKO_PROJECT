@@ -25,9 +25,13 @@ main {
   margin-top: 0.5em;
   margin-left: 1.5em;
   font-size: 1.1em;
+  font-weight: 400;
 }
 .prof_separa {
   color: utils.$color_hover;
+}
+.prof_span {
+   font-weight: 400;
 }
 .prof_responsive {
   display: none;
@@ -39,11 +43,16 @@ main {
   width: clamp(280px, 30%, 600px); // Ancho flexible entre móviles y desktop
   font-size: clamp(0.95em, 1.5vw, 1.1em); // Tamaño de fuente responsivo
   margin-left: auto;
-  margin-right: 0;
+  margin-right: 1em;
   margin-top: 1.5em;
 }
- 
 
+.bio p {
+  font-weight: 400;
+}
+.text_oculto{
+   font-weight: 400;
+}
 
 .contacto-bloque {
   text-align: right;
@@ -55,6 +64,7 @@ main {
 }
 .contacto, .nombre {
   color: utils.$color_fondo;
+  font-weight: 400;
 }
 // Media query mínima para ajustar padding en móviles
 /* Tablets */
