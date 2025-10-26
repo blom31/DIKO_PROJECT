@@ -57,7 +57,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #aba8a8;
   font-weight: bold;
   margin-bottom: 10px;
@@ -446,8 +446,11 @@ main {
   margin: 10px;
 }
 
-.colab {
+.colab span {
   text-decoration: underline;
+  color: #eef0f8;
+  margin-left: 1.5em;
+  font-weight: 400;
 }
 
 /*responsividad*/
@@ -465,6 +468,14 @@ main {
     width: 98%;
     height: 15em;
     overflow-y: auto;
+  }
+  .colaboraciones {
+    width: 98%;
+    margin: 0;
+    text-align: center;
+  }
+  .creditos-trabajo {
+    width: 98%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -490,12 +501,26 @@ main {
   }
   .creditos-trabajo {
     flex-direction: column;
-    width: 98vw;
-    margin-bottom: 10px;
+    width: 90%;
+    margin: 0px;
+  }
+  .colab span {
+    margin-left: 0;
   }
   .col1,
   .col2 {
+    width: 100%;
     margin: 0;
+    padding-left: 0.7em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .creditos-trabajo {
+    width: 100%;
+  }
+  .col1,
+  .col2 {
+    padding-left: 0.3em;
   }
 }
 /*Estilo de la galería de Venezuela*/
