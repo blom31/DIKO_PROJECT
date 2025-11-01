@@ -14,10 +14,10 @@
   background-repeat: no-repeat;
   /* Evita que la imagen se repita */
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 main {
+  display: flex;
+  flex-direction: column;
   flex: 1; /* ocupa todo el espacio disponible */
 }
 .prof {
@@ -31,7 +31,7 @@ main {
   color: utils.$color_hover;
 }
 .prof_span {
-   font-weight: 400;
+  font-weight: 400;
 }
 .prof_responsive {
   display: none;
@@ -50,8 +50,8 @@ main {
 .bio p {
   font-weight: 400;
 }
-.text_oculto{
-   font-weight: 400;
+.text_oculto {
+  font-weight: 400;
 }
 
 .contacto-bloque {
@@ -62,7 +62,8 @@ main {
   //  que quede pegado al footer visualmente:
   top: em; // Ajusta según lo que veas en pantalla
 }
-.contacto, .nombre {
+.contacto,
+.nombre {
   color: utils.$color_fondo;
   font-weight: 400;
 }
@@ -76,7 +77,8 @@ main {
     text-align: left;
   }
 
-  .contacto, .nombre {
+  .contacto,
+  .nombre {
     color: utils.$color_contacto;
   }
 }
@@ -133,8 +135,8 @@ main {
     font-size: 1em;
     margin-bottom: 1em;
   }
-  h4{
-       color: utils.$color_contacto;
+  h4 {
+    color: utils.$color_contacto;
   }
   .contacto {
     padding: 0 0.8em;
